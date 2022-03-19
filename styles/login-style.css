@@ -46,6 +46,14 @@ body {
     padding-left:20px;
 }
 
+.login-field-error{
+    border: 3px solid red;
+}
+
+.login-error-text {
+    color: red;
+}
+
 .login-button {
     background-color:#C4C4C4;
     color:black;

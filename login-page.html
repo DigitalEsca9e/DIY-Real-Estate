@@ -3,6 +3,7 @@
   <head>
     <title>Log In</title>
     <link rel="stylesheet" href="./styles/login-style.css"/>
+    <script src="./scripts/login-page-script.js"></script>
   </head>
   <body>
     <div class="login-bg">
@@ -10,12 +11,15 @@
 	<div class="login-panel-inner">
 	  
 	  <p class="login-panel-header">Log In</p>
-	  <input class="login-field" id="username" type="text" placeholder="Username"/>
-	  <input class="login-field" id="password" type="password" placeholder="Password">
+	  <p class="login-error-text" id="user-error-msg"></p>
+	  <input class="login-field" id="username" type="text" placeholder="Username" onchange="OnEditUsername()"/>
 
+	  
+	  <p class="login-error-text" id="pass-error-msg"></p>
+	  <input class="login-field" id="password" type="password" placeholder="Password" onchange="OnEditPassword()"/>
 	  <div class="login-button-container">
-	    <button class="login-button" id="login-button">Login</button>
-	    <button class="login-button" id="login-register-button">Register</button>
+	    <button class="login-button" id="login-button" onclick="LoginButtonClick()">Login</button>
+	    <button class="login-button" id="login-register-button" onclick="RegisterButtonClick()">Register</button>
 	  </div>
 	  
 	</div>
