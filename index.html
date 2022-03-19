@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Site Name</title>
+        <link rel="stylesheet" href="mainstyle.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="site-title">Site name</h1>
+            <div class="nav-options">
+                <button type="button">Information</button>
+                <button type="button">Contact Us</button>
+                <button type="button">Consult an Expert</button>
+            </div>
+            <div class="loginStatus">
+                <image class="loggedout" src="">
+                <image class="loggedin" src="">        
+            </div>
+        </div>
+        <div id="landing-page" class="page-content">
+            <div id="landing-search-text" class="search-bar">
+                <input type="text" placeholder="Search a home..."/>
+                <input type="text" placeholder="Province"/>
+                <input type="text" placeholder="Postal Code"/>
+            </div>
+            <div id="landing-search-options">
+                <select id="L-type">
+                    <option>Type of Property</option>
+                    <option value="Studio-Apartment">Studio-Apartment</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Condo-Townhouse">Condo-Townhouse</option>
+                    <option value="Townhouse">Townhouse</option>
+                    <option value="Semi-Detached">Semi-Detached</option>
+                    <option value="Detached">Detached</option>    
+                </select>
+                <select id="L-bedrooms">
+                    <option>No. of Bedrooms</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option>
+                    <option value='10'>10</option>
+                </select>
+                <select id="L-bathrooms">
+                    <option>No. of Bathrooms</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option>
+                    <option value='10'>10</option>
+                </select>
+                <select id="L-garage">
+                    <option>No. of Garages</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option>
+                    <option value='10'>10</option>
+                </select>
+            </div>
+            <div id="landing-search-range">
+                <div id="L-min-price-holder">
+                    <label id="L-min-price-label" class="range-option-label">Minimum price</label>
+                    <input type="range" id="L-min-price" min="0" max="10000000">
+                </div>
+                <div id="L-max-price-holder">
+                    <label id="L-max-price-label" class="range-option-label">Maximum price</label>
+                    <input type="range" id="L-max-price" min="0" max="10000000">
+                </div>
+            </div>
+            <div id="landing-sell-button">
+                <button type="button">SELL</button>
+            </div>
+        </div>
+    </body>
+</html>
