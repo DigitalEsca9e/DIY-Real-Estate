@@ -1,0 +1,121 @@
+body{
+    margin: auto;
+}
+/*header style defintion*/
+.header{
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+}
+.site-title{
+    margin-left: 2%;
+}
+.nav-options{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50%;
+    margin-top: 2.1%;
+}
+.nav-btns{
+    border: none;
+    background-color: antiquewhite;
+    margin-left: 5%;
+    width:200px;
+    height:40px;
+    font-size: 16px;
+}
+
+/*landing page content styling*/
+#landing-content-holder{
+    background-image: url("./media/backgrounds/landing_page_bg.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 860px;
+}
+#landing-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+}
+#landing-search-text{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 20px;
+}
+.landing-text-input{
+    background-color: antiquewhite;
+    height:30px;
+    border-top:none;
+    border-right: none;
+    border-bottom: none; 
+    border-left: 2px, black;
+    left: -10px;
+    padding: 1%;
+    font-size: 24px;;
+}
+#landing-text-address{
+    width:800px;
+    border-left: none;
+}
+#landing-search-options{
+    display:flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+.landing-select-option{
+    margin-left: 2%;
+    width:200px;
+    height:50px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#landing-search-range{
+    display: flex;
+    flex-direction: row;
+    margin-top:2%;
+}
+.landing-range-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    margin-left: 2%;
+    padding: 3%;
+    border-radius: 20px;
+}
+#landing-search-button{
+
+}
+#landing-sell-button{
+    margin-top: 15%;
+    font-size: 48px;
+    padding: .5%;
+    background-color: yellow;
+    color: black;
+    border-radius: 20px;
+    border: none;
+}
+/*contact us page styling*/
+#ContactUsPage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5%;
+}
+.contact-card{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    align-items: center;
+    padding: 3%;
+    margin-left: 5%;
+}
+.contact-card-image{
+    width: 400px;
+    height: 400px;
+}
