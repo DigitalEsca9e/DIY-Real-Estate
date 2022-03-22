@@ -25,7 +25,26 @@ body{
     height:40px;
     font-size: 16px;
 }
-
+.loggedin{
+    margin-left: 150%;
+    margin-top: 25%;
+    width:50px;
+    height: 50px;
+}
+.logincontainer{
+    width:100px;
+    margin-top: 35%;
+    margin-left: 70%;
+    border: 1px, solid;
+    height: 40px;
+}
+.loggedout{
+    text-decoration: none;
+    color: black;
+}
+.loggedout :hover{
+    text-decoration: underline, black;
+}
 /*landing page content styling*/
 #landing-content-holder{
     background-image: url("./media/backgrounds/landing_page_bg.jpg");
@@ -57,6 +76,9 @@ body{
     left: -10px;
     padding: 1%;
     font-size: 24px;;
+}
+* :focus{
+    outline: none;
 }
 #landing-text-address{
     width:800px;
@@ -120,3 +142,5 @@ body{
     width: 400px;
     height: 400px;
 }
+
+/*Add listing page styling*/

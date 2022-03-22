@@ -2,5 +2,92 @@
 <html>
     <head>
         <title>Add Listing</title>
+        <link rel="stylesheet" href="../mainstyle.css">
     </head>
+    <body>
+        <div class="header">
+            <h1 class="site-title" onclick="location.href='./main-LoggedIn.html'">Site name</h1>
+            <div class="nav-options">
+                <button class="nav-btns" id="header-information" type="button">Information</button>
+                <button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUsLoggedIn.html'">Contact Us</button>
+                <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-page.html'">Consult an Expert</button>
+            </div>
+            <div class="loginStatus">
+                <!--<div class="logincontainer">
+                    <a class="loggedout" href="../pages/login-page.html">LogIn</a>
+                </div>-->    
+                <image class="loggedin" src="../media/user-loggedin.png">    
+            </div>
+        </div>
+        <div id="AddListingBody">
+            <h1>Submit Listing For Verification</h1>
+            <div class="al-section" id="ownershipDetails">
+                <h2 class="al-sectionTitle">Ownership Datails</h2>
+                <div id="ownershipInputs">
+                    <div class="addListing-text-input" id="al-firstName">
+                        <label class="al-label">First Name:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input" id="al-lastName">
+                        <label class="al-label">Last Name:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input" id="al-phone">
+                        <label class="al-label">Phone Number:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input" id="al-email">
+                        <label class="al-label">E-mail:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="al-section" id="propertyDetails">
+                <h2 class="al-sectionTitle">Property Details</h2>
+                <label>Adress</label>
+                <div id="propertyInputs">
+                    <!--<div class="addListing-text-input">
+                        <label class="al-label"></label>
+                        <input class="al-input" type="text"/>
+                    </div>-->
+                    <div class="addListing-text-input" id="housNo">
+                        <label class="al-label">Unit/Apt. Number:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input" id="streetNo">
+                        <label class="al-label">Street Number:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input" id="streetName"> 
+                        <label class="al-label">Street Name:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input" id="City">
+                        <label class="al-label">City:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input" id="Province/State">
+                        <label class="al-label">Province/State:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input" id="Postal Code">
+                        <label class="al-label">Postal Code:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div>
+                        <label class="al-label">House Type:</label>
+                        <select id="al-select">
+                            <option>Property Type</option>
+                            <option value="studio">Studio</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condoTownhouse">Condo-Townhouse</option>
+                            <option value="SemiDetached">Semi-Detached</option>
+                            <option value="Detached">Detached</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

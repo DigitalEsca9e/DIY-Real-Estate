@@ -6,8 +6,9 @@ body {
 }
 
 .login-panel {
-    position:absolute;
+    position:relative;
     display:inline-block;
+    float: right;
     background-color:#E6E6E6;
     width:534px;
     height: 837px;
