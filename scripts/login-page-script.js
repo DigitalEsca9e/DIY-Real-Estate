@@ -28,7 +28,7 @@ function LoginButtonClick(){
 	    document.getElementById("pass-error-msg").innerHTML = "Please enter a valid password.";
 	}else{
 	    // LOGIN GOOD, GO TO NEXT PAGE
-	    window.location.href = "index.html";
+	    window.location.href = "../index.html";
 	}
     }
     
