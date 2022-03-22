@@ -9,6 +9,7 @@ body{
 }
 .site-title{
     margin-left: 2%;
+    cursor: pointer;
 }
 .nav-options{
     display: flex;
