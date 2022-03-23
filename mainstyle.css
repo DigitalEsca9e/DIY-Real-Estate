@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald&family=Varela+Round&display=swap');
 body{
     margin: auto;
 }
 /*header style defintion*/
 .header{
-    background-color: yellow;
+    background-color: #fccc34;
     display: flex;
     flex-direction: row;
 }
 .site-title{
+    font-family: 'Oswald', sans-serif;
     margin-left: 2%;
     cursor: pointer;
 }
@@ -15,9 +17,10 @@ body{
     display: flex;
     flex-direction: row;
     margin-left: 50%;
-    margin-top: 2.1%;
+    margin-top: 2.9%;
 }
 .nav-btns{
+    font-family: 'Fira Sans', sans-serif;
     border: none;
     background-color: antiquewhite;
     margin-left: 5%;
@@ -39,6 +42,7 @@ body{
     height: 40px;
 }
 .loggedout{
+    font-family: 'Fira Sans', sans-serif;
     text-decoration: none;
     color: black;
 }
@@ -60,6 +64,7 @@ body{
     transform: translateY(20%);
 }
 #landing-search-text{
+    
     background-color: antiquewhite;
     display: flex;
     flex-direction: row;
@@ -67,6 +72,7 @@ body{
     border-radius: 20px;
 }
 .landing-text-input{
+    font-family: 'Varela Round', sans-serif;
     background-color: antiquewhite;
     height:30px;
     border-top:none;
@@ -90,6 +96,7 @@ body{
     margin-top: 2%;
 }
 .landing-select-option{
+    font-family: 'Varela Round', sans-serif;
     margin-left: 2%;
     width:200px;
     height:50px;
@@ -103,6 +110,7 @@ body{
     margin-top:2%;
 }
 .landing-range-options{
+    font-family: 'Varela Round', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,10 +120,11 @@ body{
     border-radius: 20px;
 }
 #landing-sell-button{
+    font-family: 'Fira Sans', sans-serif;
     margin-top: 15%;
     font-size: 48px;
     padding: .5%;
-    background-color: yellow;
+    background-color: #fccc34;
     color: black;
     border-radius: 20px;
     border: none;
@@ -128,9 +137,10 @@ body{
     margin-top: 5%;
 }
 .contact-card{
+    font-family: 'Fira Sans', sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: yellow;
+    background-color: #fccc34;
     align-items: center;
     padding: 3%;
     margin-left: 5%;
@@ -146,6 +156,7 @@ label{
     font-weight: bold;
 }
 #AddListingBody{
+    font-family: 'Fira Sans', sans-serif;
     display:flex;
     flex-direction: column;
     margin-left: 15%;
@@ -157,6 +168,7 @@ label{
     background-color: antiquewhite;
 }
 .al-section{
+    font-family: 'Fira Sans', sans-serif;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -169,26 +181,29 @@ label{
 
 .addListing-text-input-r{
     float: right;
-    margin-left: 5%;
+    margin-left:auto; 
 }
 .addListing-text-input-l{
     float: left;
-    
+
 }
 .al-label{
+    font-family: 'Varela Round', sans-serif;
     font-size: 20px;
     font-weight: normal;
     margin-right: 1%;   
 }
 .al-input{
+    font-family: 'Varela Round', sans-serif;
     font-size: 20px;
     border: none;
-    border-bottom: 1px solid yellow;
+    border-bottom: 1px solid #fccc34;
 }
 .al-input :focus{
     outline: none;
 }
 .al-select-option{
+    font-family: 'Varela Round', sans-serif;
     font-size: 20px;
     text-align: center;
 }
@@ -197,17 +212,73 @@ label{
     font-size: 20px;
 }
 .checkboxLabel{
+    font-family: 'Varela Round', sans-serif;
     font-weight: normal;
     font-size: 20px
 }
 #al-submitButton{
+    font-family: 'Fira Sans', sans-serif;
     margin: 5%;
     padding:1%;
     font-size: 20px;
     border: none;
-    background-color: yellow;
+    background-color: #fccc34;
     border-radius: 20px;
 }
 #al-submitButton :hover{
     background-color: antiquewhite;
+}
+/*Account information page style*/
+#navigation{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    float: left;
+}
+.info-page{
+    float: right;
+    width: 80%;
+}
+.info-nav-btns{
+    font-family: 'Fira Sans', sans-serif;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    font-size: 24px;
+    text-align: left;
+    border: none;
+    background-color: antiquewhite;
+}
+.Info-page-header{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 48px;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.listingCard{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: antiquewhite;
+}
+.listingImage{
+    width: 300px;
+    height: 200px;
+}
+.listingDetails{
+    font-family: 'Varela Round', sans-serif;
+    display:flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.lsitingAdress{
+    font-size: 30px;
+}
+.listingDescription{
+    margin-top: 20%;
 }

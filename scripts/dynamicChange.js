@@ -5,6 +5,19 @@ function alHideAll(){
     }
     document.getElementById("al-submitButton").hidden=true;
 }
+
+
+function infoShowSection(sectionName){
+    var allele=document.getElementsByClassName("info-page");
+    if(allele!=null){
+        for(var i=0; i<allele.length;i++){
+            allele[i].hidden=true;
+        }
+    }
+    document.getElementById(sectionName).hidden=false;
+}
+
+
 function alShowSection(){
     var select=document.getElementById("house-type-select").value;
     if(select=="studio"){
