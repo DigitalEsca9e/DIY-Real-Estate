@@ -111,9 +111,6 @@ body{
     padding: 3%;
     border-radius: 20px;
 }
-#landing-search-button{
-
-}
 #landing-sell-button{
     margin-top: 15%;
     font-size: 48px;
@@ -144,3 +141,73 @@ body{
 }
 
 /*Add listing page styling*/
+label{
+    font-size: 24px;
+    font-weight: bold;
+}
+#AddListingBody{
+    display:flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    border-radius: 30px;
+    align-items: center;
+    width: 70%;
+    background-color: antiquewhite;
+}
+.al-section{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+#al-main-select{
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+}
+
+.addListing-text-input-r{
+    float: right;
+    margin-left: 5%;
+}
+.addListing-text-input-l{
+    float: left;
+    
+}
+.al-label{
+    font-size: 20px;
+    font-weight: normal;
+    margin-right: 1%;   
+}
+.al-input{
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid yellow;
+}
+.al-input :focus{
+    outline: none;
+}
+.al-select-option{
+    font-size: 20px;
+    text-align: center;
+}
+.checkboxInput{
+    margin-left: 2%;
+    font-size: 20px;
+}
+.checkboxLabel{
+    font-weight: normal;
+    font-size: 20px
+}
+#al-submitButton{
+    margin: 5%;
+    padding:1%;
+    font-size: 20px;
+    border: none;
+    background-color: yellow;
+    border-radius: 20px;
+}
+#al-submitButton :hover{
+    background-color: antiquewhite;
+}

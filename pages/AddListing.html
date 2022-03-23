@@ -3,8 +3,9 @@
     <head>
         <title>Add Listing</title>
         <link rel="stylesheet" href="../mainstyle.css">
+        <script src="../scripts/dynamicChange.js"></script>
     </head>
-    <body>
+    <body onload="alHideAll()">
         <div class="header">
             <h1 class="site-title" onclick="location.href='./main-LoggedIn.html'">Site name</h1>
             <div class="nav-options">
@@ -24,19 +25,20 @@
             <div class="al-section" id="ownershipDetails">
                 <h2 class="al-sectionTitle">Ownership Datails</h2>
                 <div id="ownershipInputs">
-                    <div class="addListing-text-input" id="al-firstName">
+                    <div class="addListing-text-input-l" id="al-firstName">
                         <label class="al-label">First Name:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div class="addListing-text-input" id="al-lastName">
+                    <div class="addListing-text-input-r" id="al-lastName">
                         <label class="al-label">Last Name:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div class="addListing-text-input" id="al-phone">
+                    <br/>
+                    <div class="addListing-text-input-l" id="al-phone">
                         <label class="al-label">Phone Number:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div class="addListing-text-input" id="al-email">
+                    <div class="addListing-text-input-r" id="al-email">
                         <label class="al-label">E-mail:</label>
                         <input class="al-input" type="text"/>
                     </div>
@@ -45,49 +47,347 @@
             <hr>
             <div class="al-section" id="propertyDetails">
                 <h2 class="al-sectionTitle">Property Details</h2>
-                <label>Adress</label>
+                <label>Address</label>
                 <div id="propertyInputs">
                     <!--<div class="addListing-text-input">
                         <label class="al-label"></label>
                         <input class="al-input" type="text"/>
                     </div>-->
-                    <div class="addListing-text-input" id="housNo">
+                    <div class="addListing-text-input-l" id="housNo">
                         <label class="al-label">Unit/Apt. Number:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div class="addListing-text-input" id="streetNo">
+                    <div class="addListing-text-input-r" id="streetNo">
                         <label class="al-label">Street Number:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div class="addListing-text-input" id="streetName"> 
+                    <br/>
+                    <div class="addListing-text-input-l" id="streetName"> 
                         <label class="al-label">Street Name:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div class="addListing-text-input" id="City">
+                    <div class="addListing-text-input-r" id="City">
                         <label class="al-label">City:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div class="addListing-text-input" id="Province/State">
+                    <br/>
+                    <div class="addListing-text-input-l" id="Province/State">
                         <label class="al-label">Province/State:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div class="addListing-text-input" id="Postal Code">
+                    <div class="addListing-text-input-r" id="Postal Code">
                         <label class="al-label">Postal Code:</label>
                         <input class="al-input" type="text"/>
                     </div>
-                    <div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div id="al-main-select">
                         <label class="al-label">House Type:</label>
-                        <select id="al-select">
+                        <select id="house-type-select" class="al-select-option" onchange="alShowSection()">
                             <option>Property Type</option>
                             <option value="studio">Studio</option>
                             <option value="apartment">Apartment</option>
                             <option value="condoTownhouse">Condo-Townhouse</option>
+                            <option value="Townhouse">Townhouse</option>
                             <option value="SemiDetached">Semi-Detached</option>
                             <option value="Detached">Detached</option>
                         </select>
                     </div>
                 </div>
+                <div class="al-typesection" id="al-studio">
+                    <hr>
+                    <div class="addListing-text-input-l">
+                        <label class="al-label">Floor Number (Enter 0 for ground floor):</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input-r">
+                        <label class="al-label">Square Footage:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <label>Details</label>
+                    <br/>
+                    <select class="al-select-option" id="al-garage">
+                        <option>Parking Space(s)</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10+</option>
+                    </select>
+                    <br/>
+                    <label>Utilities</label>
+                    <br/>
+                    <!--<div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel"></label>
+                    </div>-->
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Air conditioner</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Heating</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Stairs</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Elevator</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Dishwasher</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Laundry</label>
+                    </div>
+                    <label>Facilities</label>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Gym</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Pool</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Sauna</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Balcony</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Rooftop Access</label>
+                    </div>
+                </div>
+                <div class="al-typesection" id="al-apartment">
+                    <hr>
+                    <div class="addListing-text-input-l">
+                        <label class="al-label">Floor Number (Enter 0 for ground floor):</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input-r">
+                        <label class="al-label">Square Footage:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <br/>
+                    <label>Details</label>
+                    <br/>
+                    <select class="al-select-option" id="ap-bedrooms">
+                        <option>No. of Bedrooms</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10+</option>
+                    </select>
+                    <select class="al-select-option" id="ap-bathrooms">
+                        <option>No. of Bathrooms</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10+</option>
+                    </select>
+                    <select class="al-select-option" id="ap-garage">
+                        <option>Parking Space(s)</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10+</option>
+                    </select>
+                    <br/>
+                    <label>Utilities</label>
+                    <!--<div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel"></label>
+                    </div>-->
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Air conditioner</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Heating</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Stairs</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Elevator</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Dishwasher</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Laundry</label>
+                    </div>
+                    <label>Facilities</label>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Gym</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Pool</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Sauna</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Balcony</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Rooftop Access</label>
+                    </div>
+                </div>
+                <div class="al-typesection" id="al-condoTownhouse">
+                    <hr>
+                    <div class="addListing-text-input-l">
+                        <label class="al-label">Floors (basement inclusive):</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input-r">
+                        <label class="al-label">Square Footage:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <br/>
+                </div>                
+                <div class="al-typesection" id="al-detached">
+                    <hr>
+                    <div class="addListing-text-input-l">
+                        <label class="al-label">Floors (basement inclusive):</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input-r">
+                        <label class="al-label">Square Footage:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <label>Details</label>
+                    <br/>
+                    <select class="al-select-option" id="dt-bedrooms">
+                        <option>No. of Bedrooms</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10+</option>
+                    </select>
+                    <select class="al-select-option" id="dt-bathrooms">
+                        <option>No. of Bathrooms</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10+</option>
+                    </select>
+                    <select class="al-select-option" id="dt-garage">
+                        <option>No. of Garages</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10+</option>
+                    </select>
+                    <select class="al-select-option" id="dt-garage">
+                        <option>Basement</option>
+                        <option value='n/a'>n/a</option>
+                        <option value='unfinished'>unfinished</option>
+                        <option value='finished'>finished</option>
+                    </select>
+                    <br/>
+                    <label>Utilities</label>
+                    <br/>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Air conditioner</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Heating</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Dishwasher</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Laundry</label>
+                    </div>
+                    <label>Features</label>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Pool</label>
+                    </div>
+                    <div class="checkboxInputHolder">
+                        <input type="checkbox" class="checkboxInput">
+                        <label class="checkboxLabel">Driveway</label>
+                    </div>
+
+                </div>
             </div>
+            <button type="submit" id="al-submitButton" onclick="submitAlert()">Submt for verification</button>
         </div>
     </body>
 </html>
