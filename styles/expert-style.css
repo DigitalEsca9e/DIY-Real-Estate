@@ -18,13 +18,14 @@ body {
 }
 
 .expert-desc-panel {
-    background-color: #CCC;
+    background-color: #EDE8E8;
     /* display:inline-block; */
     width:75%;
     /* margin-left:20px; */
     margin-left:auto;
     right:0px;
     height:100%;
+    border-radius:10px;
 }
 
 .expert-mask {
@@ -41,6 +42,7 @@ body {
 
 .expert-name {
     margin-top:5px;
+    text-align: center;
 }
 
 .expert-card {
@@ -55,5 +57,15 @@ body {
 
 .expert-img {
     width:100%;
+    height:100%;
+}
+
+.expert-desc {
+    margin-left:20px;
+    margin-top:20px;
+}
+
+.expert-reviews {
+    width:20%;
     height:100%;
 }
