@@ -276,9 +276,42 @@ label{
     margin-left: 5%;
     margin-top: 2%;
 }
-.lsitingAdress{
+.lsitingAddress{
+    font-family: 'Fira Sans', sans-serif;
     font-size: 30px;
 }
 .listingDescription{
-    margin-top: 20%;
+    font-family: 'Varela Round', sans-serif;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+.contactDetails{
+    display: flex;
+    flex-direction: row;
+}
+.c-phone{
+    font-weight: bold;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+.userDetail{
+    margin-top: 5%;
+    margin-left: 7%;
+}
+.detailTitle{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+.actualdetail{
+    font-family: 'Varela Round', sans-serif;
+    margin-left: 2%;
+    font-weight: normal;
+    font-size: 24px;
+}
+.change-link{
+    font-family: 'Varela Round', sans-serif;
+    margin-left: 10%;
+    color: blue;
+    text-decoration: underline;
 }
