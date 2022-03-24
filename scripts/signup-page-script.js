@@ -130,5 +130,27 @@ function checkValidFields(){
 	return false;
     }
 
+    if(password.value.length == 0){
+	password.setCustomValidity('invalid');
+	error.style.display = 'block';
+	error.innerHTML = 'Please Enter your password.';
+	password.onchange = function(){
+	    clearError(password);
+	};
+	return false;
+    }
+
+    if(password.value !== cPass.value){
+	password.setCustomValidity('invalid');
+	cPass.setCustomValidity('invalid');
+	error.style.display = 'block';
+	error.innerHTML = "The password does not mach the confirmation.";
+	cPass.onchange = function(){
+	    clearError(password);
+	    clearError(cPass);
+	};
+	return false;
+    }
+
     return true;
 }

@@ -67,6 +67,7 @@ body {
 .signup-fieldbox input::placeholder {
     /* color:#CCC; */
     color:#999;
+    user-select: none;
 }
 
 .signup-field input:focus::placeholder {
@@ -116,10 +117,16 @@ body {
     padding:10px;
     width:100px;
     border-radius:3px;
+    /* box-sizing:border-box; */
 }
 
 .signup-button-confirm:hover {
     background-color: #46A;
+}
+
+.signup-button-confirm:focus {
+    /* border: 3px solid #46A; */
+    box-shadow: inset 0px 0px 0px 3px #468;
 }
 
 .signup-nav {
@@ -181,6 +188,10 @@ body {
 input:invalid {
     border:0;
     border-bottom:3px dashed red;
+}
+
+input:focus:invalid {
+    border:0;
 }
 
 #signup-error {
