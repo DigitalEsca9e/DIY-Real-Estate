@@ -3,9 +3,24 @@
   <head>
     <title>Create an Account</title>
     <link rel="stylesheet" href="../styles/signup-style.css"/>
+	<link rel="stylesheet" href="../mainstyle.css">
     <script src="../scripts/signup-page-script.js"></script>
   </head>
   <body>
+	<div class="header">
+		<h1 class="site-title" onclick="location.href='../index.html'">Yellow Bricks</h1>
+		<div class="nav-options">
+			<button class="nav-btns" id="header-information" type="button" onclick="location.href='./information.html'">Information</button>
+			<button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUs.html'">Contact Us</button>
+			<button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-page.html'">Consult an Expert</button>
+		</div>
+		<div class="loginStatus">
+			<div class="logincontainer">
+				<a class="loggedout" href="../pages/login-page.html">LogIn</a>
+			</div>
+			<!--<image class="loggedin" src="../media/user-loggedin.png">-->        
+		</div>
+	</div>
     <div class="signup-panel">
       <h1>Create an Account</h1>
       <div id="signup-screens">
