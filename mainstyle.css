@@ -430,3 +430,33 @@ label{
     margin-right: 10%;
     margin-bottom: 3%;
 }
+/*search page styling*/
+.column
+{
+  float: left;
+  width: 31%;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search-bar{ width: 100% }
+
+.sentence
+{
+  font-family: 'Varela Round', sans-serif;
+  color: black;
+}
+
+/*search icaon styling*/
+.msb{
+    font-size: 24px;
+    background: transparent;
+    border: none;
+}
+.bsb{
+    font-size: 48px;
+    background: transparent;
+    border: none;
+}
