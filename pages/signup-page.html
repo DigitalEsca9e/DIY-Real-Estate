@@ -17,14 +17,18 @@
 	      <input id="last-name" type="text" placeholder="Last Name"/>
 	    </div>
 	    <hr>
-	    <input id="email" type="email" placeholder="Email Address"/>
+	    <input id="email" placeholder="Email Address"/>
 	    
 	  </div>
 	  
 	  <div class="signup-fieldbox">
 	    <input id="username" placeholder="Username"/>
 	    <hr>
-	    <input id="password" type="password" placeholder="Password"/>
+	    <div class="signup-pass-container">
+	      <input id="password" type="password" placeholder="Password"/>
+	      <button class="pass-vis-button" id="show-pass-button" onclick="togglePassword();"></button>
+	    </div>
+	    
 	    <hr>
 	    <input id="pass-confirm" type="password" placeholder="Confirm Password"/>
 	  </div>

@@ -120,8 +120,25 @@ body {
     width:100%;
 }
 
+
+
 .signup-error {
     border-bottom: 2px solid red;
+}
+
+.signup-pass-container {
+    width:100%;
+    display:flex;
+}
+
+#password {
+    /* width:80%; */
+}
+
+.pass-vis-button {
+    /* display:inline; */
+    width:31px;
+    height:31px;
 }
 
 .sep {

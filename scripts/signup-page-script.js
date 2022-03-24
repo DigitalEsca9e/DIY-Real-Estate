@@ -1,5 +1,7 @@
 var steps = 0;
 
+var showPassword = false;
+
 function start(){
     var screens = document.getElementById("signup-screens").children;
 
@@ -33,4 +35,25 @@ function next(){
 
 	document.getElementById("signup-prev").disabled = false;
     }
+}
+
+function togglePassword(){
+    var pass = document.getElementById("password");
+    var cPass = document.getElementById("pass-confirm");
+    
+    if(!showPassword){
+	showPassword = true;
+	
+
+	pass.type = "text";
+	cPass.type = "text";
+    }else{
+	showPassword = false;
+	pass.type = "password";
+	cPass.type = "password";
+    }
+}
+
+function checkFirstPage(){
+    
 }
