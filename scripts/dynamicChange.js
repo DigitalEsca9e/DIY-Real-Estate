@@ -17,6 +17,10 @@ function infoShowSection(sectionName){
     document.getElementById(sectionName).hidden=false;
 }
 
+function addedContact(){
+    alert("Contact has been added!")
+}
+
 
 function alShowSection(){
     var select=document.getElementById("house-type-select").value;
