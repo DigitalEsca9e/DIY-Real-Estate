@@ -3,14 +3,15 @@
     <head>
         <title>Site Name</title>
         <link rel="stylesheet" href="../mainstyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="header">
             <h1 class="site-title" onclick="location.href='./index.html'">Yellow Bricks</h1>
             <div class="nav-options">
-                <button class="nav-btns" id="header-information" type="button">Information</button>
+                <button class="nav-btns" id="header-information" type="button" onclick="location.href='./informationLoggedIn.html'">Information</button>
                 <button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUsLoggedIn.html'">Contact Us</button>
-                <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-page.html'">Consult an Expert</button>
+                <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-pageLoggedIn.html'">Consult an Expert</button>
             </div>
             <div class="loginStatus">
               <!--  <div class="logincontainer">
@@ -26,7 +27,7 @@
                     <input class="landing-text-input" type="text" placeholder="Province"/>
                     <input class="landing-text-input" type="text" placeholder="Postal Code"/>
                     <div id="landing-search-button">
-                        <button type="button">Search</button>
+                        <button class="bsb" type="button" onclick="location.href='searchLoggedIn.html'"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
                 <div id="landing-search-options">
