@@ -2,6 +2,11 @@ body {
     font-family: Arial;
 }
 
+.expert-list {
+    width:60%;
+    display:block;
+}
+
 
 .expert-panel{
     display: flex;
@@ -26,6 +31,8 @@ body {
     right:0px;
     height:100%;
     border-radius:10px;
+    overflow: hidden;
+    /* padding: 20px; */
 }
 
 .expert-mask {
@@ -66,6 +73,8 @@ body {
 }
 
 .expert-reviews {
-    width:20%;
-    height:100%;
+    
+    background-color:#CCC;
+    height:2000px;
+    width:40%;
 }

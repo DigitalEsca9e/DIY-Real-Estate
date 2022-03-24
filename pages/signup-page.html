@@ -27,12 +27,12 @@
 	<section>
 	  <div class="signup-fieldbox">
 	    <div class="signup-multi-fieldbox">
-	      <input id="first-name" type="text" placeholder="First Name"/>
+	      <input id="first-name" type="text" pattern="^[a-zA-Z]+$" placeholder="First Name"/>
 	      <div class="vr"></div>
-	      <input id="last-name" type="text" placeholder="Last Name"/>
+	      <input id="last-name" type="text" pattern="^[a-zA-Z]+$" placeholder="Last Name"/>
 	    </div>
 	    <hr>
-	    <input id="email" placeholder="Email Address"/>
+	    <input id="email" type="email" placeholder="Email Address"/>
 	    
 	  </div>
 	  
@@ -41,7 +41,7 @@
 	    <hr>
 	    <div class="signup-pass-container">
 	      <input id="password" type="password" placeholder="Password"/>
-	      <button class="pass-vis-button" id="show-pass-button" onclick="togglePassword();"></button>
+	      <button class="pass-vis-button" tabindex="-1" id="show-pass-button" onclick="togglePassword();"></button>
 	    </div>
 	    
 	    <hr>
@@ -52,6 +52,7 @@
 	  <h2>Contact Info</h2>
 	</section>
       </div>
+      <p id="signup-error"></p>
       <div class="signup-nav">
 	<button class="signup-button" id="signup-prev" onclick="prev();">Previous</button>
 	<button class="signup-button-confirm" id="signup-next" onclick="next();">Next</button>
