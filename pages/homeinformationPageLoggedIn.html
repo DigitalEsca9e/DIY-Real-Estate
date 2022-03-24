@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home Information
+        </title>
+        <link rel="stylesheet" href="../mainstyle.css">
+        <script src="../scripts/dynamicChange.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="site-title" onclick="location.href='./main-LoggedIn.html'">Yellow Bricks</h1>
+            <div class="nav-options">
+                <button class="nav-btns" id="header-information" type="button">Information</button>
+                <button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUsLoggedIn.html'">Contact Us</button>
+                <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-page.html'">Consult an Expert</button>
+            </div>
+            <div class="loginStatus">
+                <!--<div class="logincontainer">
+                    <a class="loggedout" href="../pages/login-page.html">LogIn</a>
+                </div>--> 
+                <image class="loggedin" src="../media/user-loggedin.png" onclick="location.href='./AccountInformation.html'">       
+            </div>
+        </div>
+        <div id="m-content-holder">
+            <div id="m-page" class="page-content">
+                <div id="m-search-text" class="search-bar">
+                    <input class="m-text-input" id="m-text-address" type="text" placeholder="Search a home..."/>
+                    <input class="m-text-input" type="text" placeholder="Province"/>
+                    <input class="m-text-input" type="text" placeholder="Postal Code"/>
+                    <div id="m-search-button">
+                        <button type="button">Search</button>
+                    </div>
+                </div>
+                <div id="m-search-options">
+                    <select class="m-select-option" id="L-type">
+                        <option>Type of Property</option>
+                        <option value="Studio-Apartment">Studio-Apartment</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Condo-Townhouse">Condo-Townhouse</option>
+                        <option value="Townhouse">Townhouse</option>
+                        <option value="Semi-Detached">Semi-Detached</option>
+                        <option value="Detached">Detached</option>    
+                    </select>
+                    <select class="m-select-option" id="L-bedrooms">
+                        <option>No. of Bedrooms</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+                    </select>
+                    <select class="m-select-option" id="L-bathrooms">
+                        <option>No. of Bathrooms</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+                    </select>
+                    <select class="m-select-option" id="L-garage">
+                        <option>No. of Garages</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+                    </select>
+                </div>
+                <div id="m-search-range">
+                    <div class="m-range-options" id="L-min-price-holder">
+                        <label id="L-min-price-label" class="range-option-label">Minimum price</label>
+                        <input type="range" value="200000" id="L-min-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
+                        <output>200000</output>
+                    </div>
+                    <div class="m-range-options" id="L-max-price-holder">
+                        <label id="L-max-price-label" class="range-option-label">Maximum price</label>
+                        <input type="range" value="200000" id="L-max-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
+                        <output>200000</output>
+                    </div>
+                </div>    
+            </div>
+            <div id="ActualPage">
+                <div id="main-panel">
+                    <img id="houseImage" src="../media/property-placeholders/001.jpg">
+                    <div class="houseInfo">
+                        <!--<label class="homeInfo-l"></label>
+                        <label class="homeInfo-r"></label>-->
+                        <label class="homeInfo-l">1366 Kelvin Road</label>
+                        <label class="homeInfo-r">2500sq.ft</label>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <label class="homeInfo-l">4 Bedrooms</label>
+                        <label class="homeInfo-r">2 Bathrooms</label>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <label class="homeInfo-l">2 Garage Spaces</label>
+                        <label class="homeInfo-r">Basement: Finished</label>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <label class="homeInfo-l">Airconditioning/heating</label>
+                        <label class="homeInfo-r">Washer/dryer</label>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <label class="homeInfo-l">Pool</label>
+                        <label class="homeInfo-r">Closed Backyard</label>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div>
+                            <label class="homeInfo-l">Description</label>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div class="HouseDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                    </div>
+                </div>
+                <div id="side-panel">
+                    <button class="side-panel-btn" onclick="addedContact()">Add Contact</button>
+                    <button class="side-panel-btn" onclick="location.href='./BookAShowing.html'">Book A Showing</button>
+                    <button class="side-panel-btn" onclick="location.href='./SubmitAnOffer.html'">Submit An Offer</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

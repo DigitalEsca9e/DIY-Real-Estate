@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Book a Showing
+        </title>
+        <link rel="stylesheet" href="../mainstyle.css">
+        <script src="../scripts/dynamicChange.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="site-title" onclick="location.href='./main-LoggedIn.html'">Yellow Bricks</h1>
+            <div class="nav-options">
+                <button class="nav-btns" id="header-information" type="button">Information</button>
+                <button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUsLoggedIn.html'">Contact Us</button>
+                <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-page.html'">Consult an Expert</button>
+            </div>
+            <div class="loginStatus">
+                <!--<div class="logincontainer">
+                    <a class="loggedout" href="../pages/login-page.html">LogIn</a>
+                </div>--> 
+                <image class="loggedin" src="../media/user-loggedin.png" onclick="location.href='./AccountInformation.html'">       
+            </div>
+        </div>
+        <div id="AddListingBody">
+            <h1>Book A Showing</h1>
+            <div class="al-section" id="ownershipDetails">
+                <h2 class="al-sectionTitle">Viewers Datails</h2>
+                <div id="ownershipInputs">
+                    <div class="addListing-text-input-l" id="al-firstName">
+                        <label class="al-label">First Name:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input-r" id="al-lastName">
+                        <label class="al-label">Last Name:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <br/>
+                    <div class="addListing-text-input-l" id="al-phone">
+                        <label class="al-label">Phone Number:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                    <div class="addListing-text-input-r" id="al-email">
+                        <label class="al-label">E-mail:</label>
+                        <input class="al-input" type="text"/>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="al-section" id="ownershipDetails">
+                <h2 class="al-sectionTitle">Date and Time</h2>
+                <div id="ownershipInputs">
+                    <div class="addListing-text-input-l" id="al-firstName">
+                        <label class="al-label">Date:</label>
+                        <input class="al-input" type="date"/>
+                    </div>
+                    <div class="addListing-text-input-r" id="al-firstName">
+                        <label class="al-label">Time:</label>
+                        <input class="al-input" type="time"/>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" id="al-submitButton" onclick="submitBookingAlert()">Submit</button>
+            
+        </div>
+    </body>
+</html>

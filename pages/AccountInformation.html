@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account Information</title>
+        <link rel="stylesheet" href="../mainstyle.css">
+        <script src="../scripts/dynamicChange.js"></script>
+    </head>
+    <body onload="infoShowSection('InformationPage')">
+        <div class="header">
+            <h1 class="site-title" onclick="location.href='./main-LoggedIn.html'">Yellow Bricks</h1>
+            <div class="nav-options">
+                <button class="nav-btns" id="header-information" type="button">Information</button>
+                <button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUsLoggedIn.html'">Contact Us</button>
+                <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-page.html'">Consult an Expert</button>
+            </div>
+            <div class="loginStatus">
+                <!--<div class="logincontainer">
+                    <a class="loggedout" href="../pages/login-page.html">LogIn</a>
+                </div>-->    
+                <image class="loggedin" src="../media/user-loggedin.png">    
+            </div>
+        </div>
+        <div id="navigation">
+            <img id="profile-image" src="../media/user-loggedin.png">
+            <button type="button" class="info-nav-btns" onclick="infoShowSection('InformationPage')">Account Information</button>
+            <button type="button" class="info-nav-btns" onclick="infoShowSection('Contacts')">Contacts</button>
+            <button type="button" class="info-nav-btns" onclick="infoShowSection('SavedListings')">Saved Listings</button>
+            <button type="button" class="info-nav-btns" onclick="location.href='./AddListing.html'">Sell</button>
+            <button type="button" class="info-nav-btns" onclick="location.href='../index.html'">Logout</button>
+        </div>
+        <div id="InformationPage" class="info-page">
+            <div class="Info-page-header">Account Information</div>
+            <div class="userDetail">
+                <label class="detailTitle">Username</label>
+                <br>
+                <label class="actualdetail">Superman</label>
+                <a class="change-link">change</a>
+            </div>
+            <div class="userDetail">
+                <label class="detailTitle">Password</label>
+                <br>
+                <label class="actualdetail">*************</label>
+                <a class="change-link">change</a>
+            </div>
+            
+            <div class="userDetail">
+                <label class="detailTitle">First Name</label>
+                <br>
+                <label class="actualdetail">Clark</label>
+                <a class="change-link">change</a>
+            </div>
+            <div class="userDetail">
+                <label class="detailTitle">Last Name</label>
+                <br>
+                <label class="actualdetail">Kent</label>
+                <a class="change-link">change</a>
+            </div>
+            <div class="userDetail">
+                <label class="detailTitle">E-mail</label>
+                <br>
+                <label class="actualdetail">superman@gmail.com</label>
+                <a class="change-link">change</a>
+            </div>
+            <div class="userDetail">
+                <label class="detailTitle">Phone</label>
+                <br>
+                <label class="actualdetail">111-111-1111</label>
+                <a class="change-link">change</a>
+            </div>
+        </div>
+        <div id="Contacts" class="info-page">
+            <div class="Info-page-header">Contacts</div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/expert-photos/expert1.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">Evan Boureau</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                    <div class="contactDetails">
+                        <div class="c-phone">Phone: 111-111-1111</div>
+                        <div class="c-phone">E-mail: xyz@abc.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/expert-photos/expert2.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">Kevin Josh</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                    <div class="contactDetails">
+                        <div class="c-phone">Phone: 111-111-1111</div>
+                        <div class="c-phone">E-mail: xyz@abc.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/expert-photos/expert3.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">Laura Klien</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                    <div class="contactDetails">
+                        <div class="c-phone">Phone: 111-111-1111</div>
+                        <div class="c-phone">E-mail: xyz@abc.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/expert-photos/expert4.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">Daniel Maccoy</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                    <div class="contactDetails">
+                        <div class="c-phone">Phone: 111-111-1111</div>
+                        <div class="c-phone">E-mail: xyz@abc.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/expert-photos/expert5.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">Karla McGee</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                    <div class="contactDetails">
+                        <div class="c-phone">Phone: 111-111-1111</div>
+                        <div class="c-phone">E-mail: xyz@abc.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/property-placeholders/001.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">1366 Kelvin Road</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                    <div class="contactDetails">
+                        <div class="c-phone">Phone: 111-111-1111</div>
+                        <div class="c-phone">E-mail: xyz@abc.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/property-placeholders/002.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">1353 Bridgeport Rd</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                    <div class="contactDetails">
+                        <div class="c-phone">Phone: 111-111-1111</div>
+                        <div class="c-phone">E-mail: xyz@abc.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="SavedListings" class="info-page">
+            <div class="Info-page-header">Saved Listings</div>
+            <!--<div class="listingCard">
+                <img class="listingImage"/>
+                <div class="listingDetails">
+                    <div class="lsitingAdress"></div>
+                    <div class="listingDescription"></div>
+                </div>
+            </div>-->
+            <div class="listingCard">
+                <img class="listingImage" src="../media/property-placeholders/001.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">1366 Kelvin Road</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/property-placeholders/002.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">1353 Bridgeport Rd</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/property-placeholders/003.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">1207 Robson St</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/property-placeholders/004.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">3548 Rue De La Gare</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                </div>
+            </div>
+            <div class="listingCard">
+                <img class="listingImage" src="../media/property-placeholders/005.jpg"/>
+                <div class="listingDetails">
+                    <div class="lsitingAddress">865 Township Rd</div>
+                    <div class="listingDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur aliquam dolor sed sodales. Quisque eget turpis urna. Proin varius lacus ac mi sodales dictum vel id sem. Donec finibus at purus id ultricies. Vestibulum ac aliquam risus. Sed viverra risus lacus, ac convallis massa ultricies et. Vestibulum blandit blandit commodo.</div>
+                </div>
+            </div>
+        </div>
+</html>
