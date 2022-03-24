@@ -1,0 +1,44 @@
+<!DOCTYPE=html>
+<html>
+  <head>
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="../styles/signup-style.css"/>
+    <script src="../scripts/signup-page-script.js"></script>
+  </head>
+  <body>
+    <div class="signup-panel">
+      <h1>Create an Account</h1>
+      <div id="signup-screens">
+	<section>
+	  <div class="signup-fieldbox">
+	    <div class="signup-multi-fieldbox">
+	      <input id="first-name" type="text" placeholder="First Name"/>
+	      <div class="vr"></div>
+	      <input id="last-name" type="text" placeholder="Last Name"/>
+	    </div>
+	    <hr>
+	    <input id="email" type="email" placeholder="Email Address"/>
+	    
+	  </div>
+	  
+	  <div class="signup-fieldbox">
+	    <input id="username" placeholder="Username"/>
+	    <hr>
+	    <input id="password" type="password" placeholder="Password"/>
+	    <hr>
+	    <input id="pass-confirm" type="password" placeholder="Confirm Password"/>
+	  </div>
+	</section>
+	<section>
+	  <h2>Contact Info</h2>
+	</section>
+      </div>
+      <div class="signup-nav">
+	<button class="signup-button" id="signup-prev" onclick="prev();">Previous</button>
+	<button class="signup-button-confirm" id="signup-next" onclick="next();">Next</button>
+      </div>
+    </div>
+
+    <script>start();</script>
+  </body>
+</html>
