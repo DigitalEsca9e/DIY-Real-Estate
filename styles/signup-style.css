@@ -146,6 +146,14 @@ body {
     bottom:50px;
 }
 
+.signup-nav-finish {
+    justify-content: center;
+}
+
+.signup-nav-finish>.signup-button-confirm {
+    width:200px;
+}
+
 
 
 .signup-error {
@@ -201,4 +209,8 @@ input:focus:invalid {
 }
 
 .sep {
+}
+
+.signup-success-text {
+    font-size: 25px;
 }

@@ -12,6 +12,8 @@ function start(){
 
     document.getElementById("signup-prev").disabled = true;
 
+    document.getElementById("signup-finish-buttons").style.display = "none";
+
     
 }
 
@@ -30,7 +32,7 @@ function prev(){
 function next(){
     if(steps == 0){
 	if(checkValidFields()){
-	    window.location.href = "../pages/main-LoggedIn.html";
+	    //window.location.href = "../pages/main-LoggedIn.html";
 	    var screens = document.getElementById("signup-screens").children;
 
 	    screens[steps].style.display = "none";
@@ -40,6 +42,21 @@ function next(){
 	    document.getElementById("signup-prev").disabled = false;
 	}
     }
+}
+
+function successPage(skip = false){
+    if(checkValidFields(skip) || skip){
+	var screens = document.getElementById("signup-screens").children;
+	screens[0].style.display = "none";
+	document.getElementById("success-page").style.display = "block";
+	document.getElementById("signup-nav-buttons").style.display = "none";
+	document.getElementById("signup-finish-buttons").style.display = "flex";
+	document.getElementById("signup-title").innerHTML = "Account Created!";
+    }
+}
+
+function continueToMain(){
+    window.location.href = "../pages/main-LoggedIn.html";
 }
 
 function togglePassword(){
@@ -78,7 +95,8 @@ function clearError(element){
     element.onchange = null;
 }
 
-function checkValidFields(){
+function checkValidFields(skip = false){
+    if(skip) { return true; }
     var error = document.getElementById("signup-error");
     
     var fName = document.getElementById("first-name");

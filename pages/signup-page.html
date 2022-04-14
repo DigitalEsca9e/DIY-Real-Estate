@@ -22,7 +22,7 @@
 		</div>
 	</div>
     <div class="signup-panel">
-      <h1>Create an Account</h1>
+      <h1 id="signup-title">Create an Account</h1>
       <div id="signup-screens">
 	<section>
 	  <div class="signup-fieldbox">
@@ -48,14 +48,17 @@
 	    <input id="pass-confirm" type="password" placeholder="Confirm Password"/>
 	  </div>
 	</section>
-	<section>
-	  
+	<section id="success-page">
+	  <p class="signup-success-text">Your account has been created!</p>
 	</section>
       </div>
       <p id="signup-error"></p>
-      <div class="signup-nav">
+      <div id="signup-nav-buttons" class="signup-nav">
 	<button class="signup-button" id="signup-prev" onclick="prev();">Previous</button>
-	<button class="signup-button-confirm" id="signup-next" onclick="next();">Create</button>
+	<button class="signup-button-confirm" id="signup-next" onclick="successPage();">Create</button>
+      </div>
+      <div class="signup-nav signup-nav-finish" id="signup-finish-buttons">
+	<button class="signup-button-confirm" onclick="continueToMain();">Finish</button>
       </div>
     </div>
 
