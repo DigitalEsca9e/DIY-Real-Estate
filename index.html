@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Site Name</title>
+        <title>Yellow Bricks</title>
         <link rel="stylesheet" href="mainstyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./scripts/dynamicChange.js"></script>
     </head>
     <body>
         <div class="header">
             <h1 class="site-title" onclick="location.href='./index.html'">Yellow Bricks</h1>
             <div class="nav-options">
-                <button class="nav-btns" id="header-information" type="button" onclick="location.href='./pages/information.html'">Information</button>
-                <button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./pages/ContactUs.html'">Contact Us</button>
-                <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./pages/expert-page.html'">Consult an Expert</button>
+                <div class="nav-btns-holder">
+                    <button class="nav-btns" id="header-information" type="button" onclick="location.href='./pages/information.html'">Information</button>
+                    <button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./pages/ContactUs.html'">Contact Us</button>
+                    <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./pages/expert-page.html'">Consult an Expert</button>
+                </div>
             </div>
-            <div class="loginStatus">
+            <div id="loginStatus" onload="headerLogIn()">
                 <div class="logincontainer">
                     <a class="loggedout" href="./pages/login-page.html">LogIn</a>
                 </div>
-             <!--<image class="loggedin" src="./media/user-loggedin.png"> -->       
+                <!--<image class="loggedin" src="./media/user-loggedin.png"> -->       
             </div>
+            <!--landing Page-->
         </div>
-            <div id="landing-content-holder">
-            <div id="landing-page" class="page-content">
-                <div id="landing-search-text" class="search-bar">
-                    <input class="landing-text-input" id="landing-text-address" type="text" placeholder="Search a home..."/>
-                    <input class="landing-text-input" type="text" placeholder="Province"/>
-                    <input class="landing-text-input" type="text" placeholder="Postal Code"/>
-                    <div id="landing-search-button">
-                        <button class="bsb" type="button" onclick="location.href='./pages/search.html'"><i class="fa fa-search"></i></button>
+        <div id="landing-content-holder" class="page_content">
+            
+                <div id="landing-page" class="page-content">
+                    <div id="landing-search-text" class="search-bar">
+                        <input class="landing-text-input" id="landing-text-address" type="text" placeholder="Search a home..."/>
+                        <input class="landing-text-input" type="text" placeholder="Province"/>
+                        <input class="landing-text-input" type="text" placeholder="Postal Code"/>
+                        <div id="landing-search-button">
+                            <button class="bsb" type="button" onclick="location.href='./pages/search.html'"><i class="fa fa-search"></i></button>
+                        </div>
                     </div>
-                </div>
-                <div id="landing-search-options">
-                    <select class="landing-select-option" id="L-type">
-                        <option>Type of Property</option>
-                        <option value="Studio-Apartment">Studio-Apartment</option>
-                        <option value="Apartment">Apartment</option>
-                        <option value="Condo-Townhouse">Condo-Townhouse</option>
-                        <option value="Townhouse">Townhouse</option>
-                        <option value="Semi-Detached">Semi-Detached</option>
-                        <option value="Detached">Detached</option>    
-                    </select>
-                    <select class="landing-select-option" id="L-bedrooms">
-                        <option>No. of Bedrooms</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option>
-                        <option value='4'>4</option>
-                        <option value='5'>5</option>
-                        <option value='6'>6</option>
-                        <option value='7'>7</option>
-                        <option value='8'>8</option>
-                        <option value='9'>9</option>
-                        <option value='10'>10</option>
-                    </select>
-                    <select class="landing-select-option" id="L-bathrooms">
-                        <option>No. of Bathrooms</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option>
-                        <option value='4'>4</option>
-                        <option value='5'>5</option>
-                        <option value='6'>6</option>
-                        <option value='7'>7</option>
-                        <option value='8'>8</option>
-                        <option value='9'>9</option>
-                        <option value='10'>10</option>
-                    </select>
-                    <select class="landing-select-option" id="L-garage">
-                        <option>No. of Garages</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option>
-                        <option value='4'>4</option>
-                        <option value='5'>5</option>
-                        <option value='6'>6</option>
-                        <option value='7'>7</option>
-                        <option value='8'>8</option>
-                        <option value='9'>9</option>
-                        <option value='10'>10</option>
-                    </select>
-                </div>
-                <div id="landing-search-range">
-                    <div class="landing-range-options" id="L-min-price-holder">
-                        <label id="L-min-price-label" class="range-option-label">Minimum price</label>
-                        <input type="range" value="200000" id="L-min-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
-                        <output>200000</output>
+                    <div id="landing-search-options">
+                        <select class="landing-select-option" id="L-type">
+                            <option>Type of Property</option>
+                            <option value="Studio-Apartment">Studio-Apartment</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Condo-Townhouse">Condo-Townhouse</option>
+                            <option value="Townhouse">Townhouse</option>
+                            <option value="Semi-Detached">Semi-Detached</option>
+                            <option value="Detached">Detached</option>    
+                        </select>
+                        <select class="landing-select-option" id="L-bedrooms">
+                            <option>No. of Bedrooms</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='6'>6</option>
+                            <option value='7'>7</option>
+                            <option value='8'>8</option>
+                            <option value='9'>9</option>
+                            <option value='10'>10</option>
+                        </select>
+                        <select class="landing-select-option" id="L-bathrooms">
+                            <option>No. of Bathrooms</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='6'>6</option>
+                            <option value='7'>7</option>
+                            <option value='8'>8</option>
+                            <option value='9'>9</option>
+                            <option value='10'>10</option>
+                        </select>
+                        <select class="landing-select-option" id="L-garage">
+                            <option>No. of Garages</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='6'>6</option>
+                            <option value='7'>7</option>
+                            <option value='8'>8</option>
+                            <option value='9'>9</option>
+                            <option value='10'>10</option>
+                        </select>
                     </div>
-                    <div class="landing-range-options" id="L-max-price-holder">
-                        <label id="L-max-price-label" class="range-option-label">Maximum price</label>
-                        <input type="range" value="200000" id="L-max-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
-                        <output>200000</output>
+                    <div id="landing-search-range">
+                        <div class="landing-range-options" id="L-min-price-holder">
+                            <label id="L-min-price-label" class="range-option-label">Minimum price</label>
+                            <input type="range" value="200000" id="L-min-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
+                            <output>200000</output>
+                        </div>
+                        <div class="landing-range-options" id="L-max-price-holder">
+                            <label id="L-max-price-label" class="range-option-label">Maximum price</label>
+                            <input type="range" value="200000" id="L-max-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
+                            <output>200000</output>
+                        </div>
                     </div>
-                </div>
-                <button id="landing-sell-button" type="button" onclick="location.href='./pages/login-page.html'">SELL</button>
-            </div>
+                    <button id="landing-sell-button" type="button" onclick="location.href='./pages/login-page.html'">SELL</button>
         </div>
     </body>
 </html>

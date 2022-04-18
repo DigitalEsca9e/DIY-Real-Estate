@@ -6,43 +6,59 @@ body{
 .header{
     background-color: #fccc34;
     display: flex;
+    width:100%;
     flex-direction: row;
 }
 .site-title{
     font-family: 'Oswald', sans-serif;
+    width:20%;
     margin-left: 2%;
     cursor: pointer;
+    font-size: 2rem;
 }
 .nav-options{
+    width:25%;
+    position: relative;
+    margin-left: 45%;
+}
+.nav-btns-holder{
+    width:100%;
     display: flex;
     flex-direction: row;
-    margin-left: 50%;
-    margin-top: 2.9%;
+    position: absolute;
+    bottom:0;
 }
 .nav-btns{
     font-family: 'Fira Sans', sans-serif;
     border: none;
-    background-color: antiquewhite;
     margin-left: 5%;
-    width:200px;
-    height:40px;
-    font-size: 16px;
+    background-color: antiquewhite;
+    width:30%;
+    min-height:30%;
+    max-height: 30%;
+    overflow: hidden;
+    font-size: 1rem;
+}
+#loginStatus{
+    margin-left: 2%;
+    width:5%
 }
 .loggedin{
-    margin-left: 150%;
-    margin-top: 25%;
-    width:50px;
-    height: 50px;
+    margin-top: 20%;
+    width:75%;
+    height: 65%;
 }
 .logincontainer{
-    width:100px;
-    margin-top: 35%;
-    margin-left: 70%;
+    justify-content:center;
+    margin-top: 50%;
+    margin-left: 10%;
+    width:100%;
     border: 1px, solid;
-    height: 40px;
+    height: 100%;
 }
 .loggedout{
     font-family: 'Fira Sans', sans-serif;
+    width:20%;
     text-decoration: none;
     color: black;
 }
@@ -51,12 +67,14 @@ body{
 }
 /*landing page content styling*/
 #landing-content-holder{
+    width:100vw;
     background-image: url("./media/backgrounds/landing_page_bg.jpg");
     background-repeat:no-repeat;
     background-size:cover;
-    height: 860px;
+    height: 100vh;
 }
 #landing-page{
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,30 +85,37 @@ body{
     
     background-color: antiquewhite;
     display: flex;
+    width: 80%;
     flex-direction: row;
-    padding: 10px;
+    padding: 1%;
     border-radius: 20px;
 }
 .landing-text-input{
     font-family: 'Varela Round', sans-serif;
     background-color: antiquewhite;
-    height:30px;
+    height:10%;
+    width:30%;
     border-top:none;
     border-right: none;
     border-bottom: none; 
     border-left: 2px, black;
-    left: -10px;
+    left: -1%;
     padding: 1%;
     font-size: 24px;;
+}
+#landing-search-button{
+    position: absolute;
+    left:87%;
 }
 * :focus{
     outline: none;
 }
 #landing-text-address{
-    width:800px;
+    width:60%;
     border-left: none;
 }
 #landing-search-options{
+    width:60%;
     display:flex;
     flex-direction: row;
     margin-top: 2%;
@@ -98,7 +123,7 @@ body{
 .landing-select-option{
     font-family: 'Varela Round', sans-serif;
     margin-left: 2%;
-    width:200px;
+    width:40%;
     height:50px;
     text-align: center;
     font-size: 20px;
@@ -131,6 +156,7 @@ body{
 }
 /*contact us page styling*/
 #ContactUsPage{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -143,11 +169,13 @@ body{
     background-color: #fccc34;
     align-items: center;
     padding: 3%;
-    margin-left: 5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 100%;
 }
 .contact-card-image{
-    width: 400px;
-    height: 400px;
+    width: 80%;
+    height: 60%;
 }
 
 /*Add listing page styling*/
@@ -321,50 +349,60 @@ label{
     display: flex;
     flex-direction: row;
     align-items: center;
-    -ms-transform: translateY(20%);
-    transform: translateY(20%);
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    background-color: black;
+    /*-ms-transform: translateY(20%);
+    transform: translateY(20%);*/
 }
 #m-search-text{
     
     background-color: antiquewhite;
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    padding: 1%;
     border-radius: 20px;
 }
 .m-text-input{
     font-family: 'Varela Round', sans-serif;
     background-color: antiquewhite;
-    height:20px;
+    width: 30%;
+    height:10%;
     border-top:none;
     border-right: none;
     border-bottom: none; 
     border-left: 2px, black;
-    left: -10px;
+    left: -1%;
     padding: .5%;
-    font-size: 12px;;
+    font-size: 24px;;
 }
 
 #m-text-address{
-    width:800px;
+    width:60%;
     border-left: none;
 }
+
 #m-search-options{
+    width: 60%;
     display:flex;
     flex-direction: row;
 }
 .m-select-option{
     font-family: 'Varela Round', sans-serif;
     margin-left: 2%;
-    width:100px;
-    height:50px;
+    width:60%;
+    height:80%;
     text-align: center;
-    font-size: 10px;
+    font-size: 24px;
     border-radius: 10px;
 }
 #m-search-range{
     display: flex;
     flex-direction: row;
+    height:80%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     margin-left:1%;
 }
 .m-range-options{
@@ -456,7 +494,7 @@ label{
     border: none;
 }
 .bsb{
-    font-size: 48px;
+    font-size: 2rem;
     background: transparent;
     border: none;
 }

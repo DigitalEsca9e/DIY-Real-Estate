@@ -1,3 +1,4 @@
+
 function alHideAll(){
     var ele=document.getElementsByClassName("al-typesection");
     for(var i=0; i<ele.length;i++){

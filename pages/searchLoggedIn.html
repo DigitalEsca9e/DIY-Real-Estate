@@ -7,25 +7,22 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<header>
-		 <title>Site Name</title>
-
-		 <div class="header">
-				 <h1 class="site-title" onclick="location.href='./main-LoggedIn.html'">Site name</h1>
-				 <div class="nav-options">
-						 <button class="nav-btns" id="header-information" type="button" onclick="location.href='./informationLoggedIn.html'">Information</button>
-						 <button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUsLoggedIn.html'">Contact Us</button>
-						 <button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-pageLoggedIn.html'">Consult an Expert</button>
-				 </div>
-				 <div class="loginStatus">
-						<!-- <div class="logincontainer">
-								 <a class="loggedout" href="./login-page.html">LogIn</a>
-						 </div> -->
-					<image class="loggedin" src="../media/user-loggedin.png" onclick="location.href='./AccountInformation.html'">
-				 </div>
-		 </div>
-
-	</header>
+	<div class="header">
+		<h1 class="site-title" onclick="location.href='./main-LoggedIn.html'">Yellow Bricks</h1>
+		<div class="nav-options">
+			<div class="nav-btns-holder">
+				<button class="nav-btns" id="header-information" type="button" onclick="location.href='./informationLoggedIn.html'">Information</button>
+				<button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUsLoggedIn.html'">Contact Us</button>
+				<button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-pageLoggedIn.html'">Consult an Expert</button>
+			</div>    
+		</div>
+		<div id="loginStatus">
+			<!--<div class="logincontainer">
+				<a class="loggedout" href="../pages/login-page.html">LogIn</a>
+			</div>-->    
+			<image class="loggedin" src="../media/user-loggedin.png" onclick="location.href='./AccountInformation.html'">     
+		</div>
+	</div>
     <div id="m-content-holder">
 		<div id="m-page" class="page-content">
 			<div id="m-search-text" class="search-bar">
