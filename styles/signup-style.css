@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald&family=Varela+Round&display=swap');
 body {
     margin:0px;
     bottom:0px;
@@ -6,9 +7,9 @@ body {
 }
 
 .signup-panel {
-    background-color: #FFF;
-    width:600px;
-    height:600px;
+    background-color: antiquewhite;
+    width:60%;
+    height:60%;
     
     /* position:absolute; */
     /* top:50%; */
@@ -19,14 +20,15 @@ body {
     /* top:50%; */
     left:50%;
     transform: translate(-50%,0);
-    margin-top: 50px;
+    margin-top: 5%;
     
-    padding:50px;
+    padding:3%;
     border-radius: 16px;
     border: 1px solid #CCC;
 }
 
 .signup-fieldbox {
+    font-family: 'Varela Round', sans-serif;
     width:50%;
     padding:5px;
     border-radius:5px;
@@ -40,7 +42,9 @@ body {
     display:flex;
 }
 
-
+#signup-title{
+    font-family: 'Fira Sans', sans-serif;
+}
 
 .vr {
     border-right: 1px solid #CCC;
@@ -57,6 +61,7 @@ body {
 }
 
 .signup-fieldbox input {
+    font-family: 'Varela Round', sans-serif;
     border: 0px;
     background-color: transparent;
     width:100%;
@@ -66,12 +71,12 @@ body {
 
 .signup-fieldbox input::placeholder {
     /* color:#CCC; */
-    color:#999;
+    color:black;
     user-select: none;
 }
 
 .signup-field input:focus::placeholder {
-    color: #CCC;
+    color: black;
 }
 
 .signup-field input:focus {
@@ -111,8 +116,9 @@ body {
 
 .signup-button-confirm {
     font-size: 14pt;
-    background-color: #68C;
-    color:#FFF;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #fccc34;
+    color:black;
     border: 0px;
     padding:10px;
     width:100px;
@@ -121,7 +127,7 @@ body {
 }
 
 .signup-button-confirm:hover {
-    background-color: #46A;
+    background-color: #fcd34e;
 }
 
 .signup-button-confirm:focus {
@@ -157,6 +163,7 @@ body {
 
 
 .signup-error {
+
     border-bottom: 2px solid red;
 }
 
@@ -203,6 +210,7 @@ input:focus:invalid {
 }
 
 #signup-error {
+    font-family: 'Varela Round', sans-serif;
     display:none;
     color:red;
     font-size:12px;
