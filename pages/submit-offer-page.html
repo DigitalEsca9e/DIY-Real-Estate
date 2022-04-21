@@ -1,7 +1,7 @@
 <!DOCTYPE=html>
 <html>
   <head>
-    <title>Book a Showing</title>
+    <title>Submit an Offer</title>
     <link rel="stylesheet" href="../mainstyle.css">
     <link rel="stylesheet" href="../styles/add-listing-style.css"/>
     <script src="../scripts/add-listing-script.js"></script>
@@ -25,7 +25,7 @@
             </div>
         </div>
     <div class="signup-panel">
-      <h1 id="signup-title">Book a Showing</h1>
+      <h1 id="signup-title">Submit an Offer</h1>
       <div id="signup-screens">
 	<section>
 	  <h2>Contact Information</h2>
@@ -48,22 +48,23 @@
 	</section>
 	
 	<section>
-	  <h2>Showing Time</h2>
-	  <div class="signup-fieldbox" >
-	    <div class="field-wrap" id="date-field">
-	      <label>Date</label>
-	      <input id="show-date" type="date" onchange="setFieldChanged('date-field');"/>
+	  <h2>Offer Amount</h2>
+	  <div class="signup-fieldbox signup-numbox">
+	    <div class="numbox" style="width:150px;">
+	      <label>Offer Amount</label>
+	      <input id="offer-amount" placeholder="$0.00" />
 	    </div>
-	    <hr>
-	    <div class="field-wrap" id="time-field">
-	      <label>Time</label>
-	      <input id="show-time" type="time" onchange="setFieldChanged('time-field');"/>
+	  </div>
+	  <div class="signup-fieldbox signup-numbox">
+	    <div class="numbox">
+	      <label>Deposit</label>
+	      <input id="deposit-amount" placeholder="$0.00" />
 	    </div>
 	  </div>
 	</section>
 	
 	<section id="success-page">
-	  <p class="signup-success-text">Showing request submitted!</p>
+	  <p class="signup-success-text">Your offer has been submitted!</p>
 	  <button class="signup-button-confirm" onclick="window.location.href='homeinformationPageLoggedIn.html'">Finish</button>
 	</section>
       </div>
