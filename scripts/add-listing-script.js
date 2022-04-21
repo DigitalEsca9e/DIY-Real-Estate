@@ -440,6 +440,14 @@ function onHouseTypeChange(ev){
     }
 }
 
+function onShowTimeChanged(){
+    var timeDetails = document.getElementById("show-info");
+    var date = document.getElementById("show-date");
+    var time = document.getElementById("show-time");
+
+    timeDetails.innerHTML = date.value + " at " + time.value;
+}
+
 
 function setFieldChanged(fieldName) {
     var field = document.getElementById(fieldName);

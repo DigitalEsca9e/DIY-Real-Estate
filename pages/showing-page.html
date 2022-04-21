@@ -52,18 +52,19 @@
 	  <div class="signup-fieldbox" >
 	    <div class="field-wrap" id="date-field">
 	      <label>Date</label>
-	      <input id="show-date" type="date" onchange="setFieldChanged('date-field');"/>
+	      <input id="show-date" type="date" onchange="setFieldChanged('date-field');onShowTimeChanged();"/>
 	    </div>
 	    <hr>
 	    <div class="field-wrap" id="time-field">
 	      <label>Time</label>
-	      <input id="show-time" type="time" onchange="setFieldChanged('time-field');"/>
+	      <input id="show-time" type="time" onchange="setFieldChanged('time-field');onShowTimeChanged();"/>
 	    </div>
 	  </div>
 	</section>
 	
 	<section id="success-page">
 	  <p class="signup-success-text">Showing request submitted!</p>
+	  <p>You have booked a showing on <span id="show-info" class="show-info">SHOW INFO</span>!</p>
 	  <button class="signup-button-confirm" onclick="window.location.href='homeinformationPageLoggedIn.html'">Finish</button>
 	</section>
       </div>
