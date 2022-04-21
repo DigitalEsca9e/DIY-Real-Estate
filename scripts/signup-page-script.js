@@ -2,6 +2,10 @@ var steps = 0;
 
 var showPassword = false;
 
+// fieldTypes
+const FIELD_TEXT = 0;
+const FIELD_EMAIL = 1;
+
 function start(){
     var screens = document.getElementById("signup-screens").children;
 
@@ -107,26 +111,36 @@ function checkValidFields(skip = false){
     var password = document.getElementById("password");
     var cPass = document.getElementById("pass-confirm");
     
-    if(fName.value.length == 0){
-	fName.setCustomValidity("invalid");
-	error.style.display = "block";
-	error.innerHTML = "Please Enter your first name.";
-	// fName.addListener("change",clearError(fName));
-	fName.onchange = function() {
-	    clearError(fName);
-	};
+    // if(fName.value.length == 0){
+    // 	fName.setCustomValidity("invalid");
+    // 	error.style.display = "block";
+    // 	error.innerHTML = "Please Enter your first name.";
+    // 	// fName.addListener("change",clearError(fName));
+    // 	fName.onchange = function() {
+    // 	    clearError(fName);
+    // 	};
+    // 	return false;
+    // }
+
+    if(fieldNotValid("first-name")){
+	showError("first-name","Please enter your first name.");
 	return false;
     }
 
-    if(lName.value.length == 0){
-	lName.setCustomValidity('invalid');
-	error.style.display = 'block';
-	error.innerHTML = 'Please Enter your last name.';
-	lName.onchange = function(){
-	    clearError(lName);
-	};
+    if(fieldNotValid("last-name")){
+	showError("last-name","Please enter your last name.");
 	return false;
     }
+
+    // if(lName.value.length == 0){
+    // 	lName.setCustomValidity('invalid');
+    // 	error.style.display = 'block';
+    // 	error.innerHTML = 'Please Enter your last name.';
+    // 	lName.onchange = function(){
+    // 	    clearError(lName);
+    // 	};
+    // 	return false;
+    // }
 
     if(email.value.length == 0){
 	email.setCustomValidity('invalid');
@@ -171,4 +185,33 @@ function checkValidFields(skip = false){
     }
 
     return true;
+}
+
+
+
+// checks if a field has a valid entry
+function fieldNotValid(fieldName, fieldType = FIELD_TEXT){
+    var field = document.getElementById(fieldName);
+    if(field.value.length == 0){
+	switch(fieldType){
+	case FIELD_TEXT:
+	    return true;
+	case FIELD_EMAIL:
+	    
+	}
+	return true;
+    }
+    return false;
+}
+
+function showError(fieldName,errorMessage){
+    var field = document.getElementById(fieldName);
+    var error = document.getElementById("signup-error");
+    
+    field.setCustomValidity('invalid');
+    error.style.display = 'block';
+    error.innerHTML = errorMessage;
+    field.onchange = function(){
+	clearError(field);
+    }
 }
