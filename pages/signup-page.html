@@ -27,42 +27,43 @@
     <div class="signup-panel">
       <h1 id="signup-title">Create an Account</h1>
       <div id="signup-screens">
-	<section>
-	  <div class="signup-fieldbox">
-	    <div class="signup-multi-fieldbox">
-	      <input id="first-name" type="text" pattern="^[a-zA-Z]+$" placeholder="First Name"/>
-	      <div class="vr"></div>
-	      <input id="last-name" type="text" pattern="^[a-zA-Z]+$" placeholder="Last Name"/>
-	    </div>
-	    <hr>
-	    <input id="email" type="email" placeholder="Email Address"/>
+		<section>
+		<div class="signup-fieldbox">
+	  		
+	    		<div class="signup-multi-fieldbox">
+	      			<input id="first-name" type="text" pattern="^[a-zA-Z]+$" placeholder="First Name"/>
+	      			<div class="vr"></div>
+	      				<input id="last-name" type="text" pattern="^[a-zA-Z]+$" placeholder="Last Name"/>
+	    			</div>
+	    			<hr>
+	    			<input id="email" type="email" placeholder="Email Address"/>
 	    
-	  </div>
+	  			</div>
 	  
-	  <div class="signup-fieldbox">
-	    <input id="username" placeholder="Username"/>
-	    <hr>
-	    <div class="signup-pass-container">
-	      <input id="password" type="password" placeholder="Password"/>
-	      <button class="pass-vis-button" tabindex="-1" id="show-pass-button" onclick="togglePassword();"></button>
-	    </div>
+	  			<div class="signup-fieldbox">
+	    			<input id="username" placeholder="Username"/>
+	    			<hr>
+	    			<div class="signup-pass-container">
+	      				<input id="password" type="password" placeholder="Password"/>
+	      				<button class="pass-vis-button" tabindex="-1" id="show-pass-button" onclick="togglePassword();"></button>
+	    			</div>
 	    
-	    <hr>
-	    <input id="pass-confirm" type="password" placeholder="Confirm Password"/>
-	  </div>
-	</section>
-	<section id="success-page">
-	  <p class="signup-success-text">Your account has been created!</p>
-	</section>
-      </div>
-      <p id="signup-error"></p>
-      <div id="signup-nav-buttons" class="signup-nav">
-	<button class="signup-button" id="signup-prev" onclick="prev();">Previous</button>
-	<button class="signup-button-confirm" id="signup-next" onclick="successPage();">Create</button>
-      </div>
-      <div class="signup-nav signup-nav-finish" id="signup-finish-buttons">
-	<button class="signup-button-confirm" onclick="continueToMain();">Finish</button>
-      </div>
+	    			<hr>
+	    			<input id="pass-confirm" type="password" placeholder="Confirm Password"/>
+	  			</div>
+			</section>
+			<section id="success-page">
+	  			<p class="signup-success-text">Your account has been created!</p>
+			</section>
+      	</div>
+      	<p id="signup-error"></p>
+      	<div id="signup-nav-buttons" class="signup-nav">
+			<button class="signup-button" id="signup-prev" onclick="prev();">Previous</button>
+			<button class="signup-button-confirm" id="signup-next" onclick="successPage();">Create</button>
+      	</div>
+      	<div class="signup-nav signup-nav-finish" id="signup-finish-buttons">
+			<button class="signup-button-confirm" onclick="continueToMain();">Finish</button>
+      	</div>
     </div>
 
     <script>start();</script>

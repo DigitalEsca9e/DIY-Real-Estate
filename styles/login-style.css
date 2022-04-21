@@ -9,10 +9,11 @@ body {
     position:relative;
     display:inline-block;
     float: right;
-    background-color:#E6E6E6;
-    width:534px;
-    height: 837px;
-    right:63px;
+    background-color:black;
+    border-radius: 30px;
+    width:30%;
+    height: 90%;
+    right:3%;
     top:50%;
     transform: translate(0,-50%);
 }
@@ -24,6 +25,7 @@ body {
 
 .login-panel-header {
     font-size:64px;
+    color:#fccc34;
     text-align:center;
 }
 
@@ -36,10 +38,12 @@ body {
 }
 
 .login-field {
+    font-family: 'Varela Round', sans-serif;
     display:block;
-    background-color:#c4c4c4;
+    background-color:antiquewhite;
     color:black;
     border: none;
+    border-bottom: 5px solid #fccc34;
     width:100%;
     height:68px;
     margin-bottom:42px;
@@ -52,21 +56,28 @@ body {
 }
 
 .login-error-text {
+    font-family: 'Varela Round', sans-serif;
     color: red;
 }
 
 .login-button {
-    background-color:#C4C4C4;
+    font-family: 'Varela Round', sans-serif;
+    background-color:#fccc34;
+    padding: 5%;
+    border-radius: 20px;
     color:black;
     border:none;
     font-size:36px;
-    width:160px;
+    width:45%;
+}
+#login-register-button{
+    background-color: gray;
 }
 
 .login-button-container {
     display:flex;
-    margin-left:20px;
-    margin-right:20px;
+    margin-left:.5%;
+    margin-right:.5%;
     justify-content:space-between;
 }
 

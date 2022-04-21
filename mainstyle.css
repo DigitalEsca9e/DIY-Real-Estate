@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald&family=Varela+Round&display=swap');
+button{
+    cursor:pointer;
+}
 body{
     margin: auto;
 }
@@ -15,6 +18,9 @@ body{
     margin-left: 2%;
     cursor: pointer;
     font-size: 2rem;
+}
+.site-title:hover{
+    cursor: pointer;
 }
 .nav-options{
     width:25%;
@@ -38,6 +44,9 @@ body{
     max-height: 30%;
     overflow: hidden;
     font-size: 1rem;
+}
+.nav-btns:hover{
+    cursor: pointer;
 }
 #loginStatus{
     margin-left: 2%;
@@ -176,6 +185,9 @@ body{
 .contact-card-image{
     width: 80%;
     height: 60%;
+}
+.contact-card-text2{
+    text-decoration: underline;
 }
 
 /*Add listing page styling*/
