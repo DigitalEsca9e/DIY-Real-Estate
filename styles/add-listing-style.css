@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald&family=Varela+Round&display=swap');
+
+body {
+    margin:0px;
+    bottom:0px;
+    top: 0px;
+    font-family:Arial;
+}
+
+h2 {
+    font-weight:normal;
+}
+
+.signup-panel {
+    background-color: #FFF;
+    width:600px;
+    height:600px;
+    
+    /* position:absolute; */
+    /* top:50%; */
+    /* left:50%; */
+    /* transform: translate(-50%,-50%); */
+
+    position:absolute;
+    /* top:50%; */
+    left:50%;
+    transform: translate(-50%,0);
+    margin-top: 50px;
+    
+    padding:50px;
+    border-radius: 16px;
+    border: 1px solid #CCC;
+    overflow:hidden;
+}
+
+h1, h2{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.signup-fieldbox {
+    
+    width:50%;
+    padding:5px;
+    border-radius:5px;
+    overflow: hidden;
+    border: 1px solid #999;
+    margin-bottom:30px;
+    margin-top: 20px;
+}
+
+.signup-multi-fieldbox {
+    display:flex;
+}
+
+
+
+.vr {
+    border-right: 1px solid #CCC;
+    margin-top:3px;
+    margin-bottom:3px;
+}
+
+.signup-fieldbox hr {
+    margin: 2px 4px 2px 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: 0px;
+    border-color:#CCC;
+}
+
+.signup-fieldbox input {
+    font-family: 'Varela Round', sans-serif;
+    border: 0px;
+    background-color: transparent;
+    width:100%;
+    font-size:12pt;
+    margin:5px;
+}
+
+.signup-fieldbox input::placeholder {
+    /* color:#CCC; */
+    color:#999;
+    user-select: none;
+}
+
+.signup-field input:focus::placeholder {
+    color: #CCC;
+}
+
+.signup-field input:focus {
+    border: 0px;
+    outline: none;
+}
+
+.signup-field input:active {
+    border: 0px;
+    outline:none;
+}
+
+.signup-multi-fieldbox input {
+    width:45%;
+}
+
+.signup-fieldbox select {
+    font-family: 'Varela Round', sans-serif;
+    border:0;
+    font-size:12pt;
+    color:#999;
+}
+
+.signup-fieldbox>select {
+    width:100%;
+}
+
+.signup-fieldbox>select:focus {
+    /* color: blue; */
+}
+
+.signup-fieldbox option {
+    color:black;
+}
+
+.signup-fieldbox select::first-child {
+    color:#999;
+}
+
+/* when a select element has a valid option picked */
+.signup-fieldbox select.set-field {
+    color:black;
+}
+.signup-select-picked {
+    color: black !important;
+}
+
+
+/* .signup-fieldbox label { */
+/*     font-weight:normal; */
+/*     font-size: 12px; */
+/*     color: #666; */
+/*     float:left; */
+/*     position:absolute; */
+/* } */
+
+
+.signup-numbox input:focus::placeholder {
+    color:transparent;
+}
+
+.signup-fieldgroup {
+    display:flex;
+    flex-direction: row;
+}
+
+.signup-fieldgroup>.signup-fieldbox {
+    margin-right:20px;
+}
+
+.signup-numbox label {
+    font-family: 'Varela Round', sans-serif;
+    float:none;
+    position:relative;
+    display:block;
+    text-align:center;
+    font-size: 12pt;
+}
+
+.signup-numfield {
+    display:flex;
+}
+
+.signup-numfield label {
+    float:none;
+    display:block;
+    position:relative;
+    font-size: 12pt;
+    user-select: none;
+}
+
+.signup-numfield input {
+    text-align: right;
+}
+
+.signup-numbox input {
+    font-size:14pt;
+}
+
+.numbox {
+    width:100px;
+}
+
+.signup-numbox {
+    /* width:auto; */
+    width: fit-content;
+}
+
+.numbox input {
+    text-align:center;
+    width:100%;
+}
+
+/* .signup-fieldbox input { */
+/*     margin-top:20px; */
+/* } */
+
+/* select:hover { */
+/*     background-color: #EEE; */
+/* } */
+
+/* option { */
+/*     background-color: white; */
+/* } */
+
+.signup-button {
+    font-size:14pt;
+    background-color: #FFF;
+    border: 1px solid #999;
+    color: #999;
+    border-radius: 3px;
+    padding: 10px;
+    width:100px;
+    
+}
+
+.signup-button:hover {
+    background-color:#FAFAFA;
+}
+
+.signup-button:disabled {
+    background-color:#DDD;
+    color:#CCC;
+    opacity: 50%;
+}
+
+.signup-button-confirm {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14pt;
+    background-color: #68C;
+    color:#FFF;
+    border: 0px;
+    padding:10px;
+    width:100px;
+    border-radius:3px;
+    /* box-sizing:border-box; */
+}
+
+.signup-button-confirm:hover {
+    background-color: #46A;
+}
+
+.signup-button-confirm:focus {
+    /* border: 3px solid #46A; */
+    box-shadow: inset 0px 0px 0px 3px #468;
+}
+
+.signup-nav {
+    left:50px;
+    right:50px;
+    display:flex;
+    flex-direction:row;
+    /* width:100%; */
+    width:auto;
+    margin-top:auto;
+    justify-content: space-between;
+
+    position:absolute;
+    /* left: 50px; */
+    /* right: 50px; */
+    
+    bottom:50px;
+}
+
+.signup-nav-finish {
+    justify-content: center;
+}
+
+.signup-nav-finish>.signup-button-confirm {
+    width:200px;
+}
+
+
+
+.signup-error {
+    border-bottom: 2px solid red;
+}
+
+.signup-pass-container {
+    width:100%;
+    display:flex;
+}
+
+#password {
+    /* width:80%; */
+}
+
+.pass-vis-button {
+    /* display:inline; */
+    width:32px;
+    height:32px;
+    border:none;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("../media/icons/eye_on.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    filter:brightness(75%);
+}
+
+.pass-vis-button:hover {
+    filter:brightness(60%);
+}
+
+/* .pass-vis-button-show { */
+/*     background-image: url("../media/icons/eye_on.png"); */
+/* } */
+.pass-vis-button-hide {
+    background-image: url("../media/icons/eye_off.png");
+}
+
+input:invalid {
+    border:0;
+    border-bottom:3px dashed red;
+}
+
+input:focus:invalid {
+    border:0;
+}
+
+#email:invalid {
+    border:0;
+}
+
+#signup-error {
+    display:none;
+    color:red;
+    font-size:12px;
+}
+
+.sep {
+}
+
+.signup-success-text {
+    font-size: 25px;
+}
+
+
+.test-anim {
+    transition: 1s;
+    margin-left: -1000px;
+}
+
+.upcase {
+    text-transform: uppercase;
+}
+
+.upcase::placeholder{
+    text-transform: none;
+}
+
+#postal-code::placeholder {
+    font-size: 10pt;
+
+}
+
+
+.signup-photo-panel {
+    display:flex;
+    flex-wrap: wrap;
+    padding:5px;
+}
+
+.photobox {
+    border-radius: 8px;
+    overflow: hidden;
+    /* width:192px; */
+    /* height:108px; */
+    width:176px;
+    height:99px;
+    margin:5px;
+    position:relative;
+    border: 1px solid #CCC;
+}
+
+.photobox img {
+    width:100%;
+    height:100%;
+}
+.photobox .remove-button {
+    
+    position:absolute;
+    width:16px;
+    height:16px;
+    background-color:#C66;
+    color:white;
+    display:inline;
+    float:right;
+    right:10px;
+    top: 10px;
+    text-align:center;
+    font-weight:bold;
+    user-select:none;
+    border-radius: 100%;
+}
+
+.remove-button:hover {
+    background-color:#C00;
+}
+
+
+
+.add-photo-button {
+    
+    /* background-color:#CCC; */
+    box-sizing: border-box;
+    padding: 15px;
+    color:#999;
+    border: 1px dashed #CCC;
+}
+
+.add-photo-button:hover {
+    border: 1px solid #AAA;
+}
+
+.add-photo-button p {
+    font-family: 'Varela Round', sans-serif;
+    margin:0;
+    text-align:center;
+    user-select:none;
+}
+
+.add-photo-button .add-photo-icon {
+    font-size:75px;
+
+    text-align:center;
+    margin:0;
+    margin-top:-15px;
+}
+
+
+
+label {
+    font-size:12pt;
+    font-weight:normal;
+}
+
+.field-wrap {
+    display:flex;
+    flex-direction: row;
+    margin:5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field-wrap.set-field > label {
+    color:black;
+}
+
+.field-wrap.set-field > input {
+    color:black;
+}
+
+.field-wrap label {
+    color: #999;
+}
+
+.field-wrap input {
+    margin:0;
+    width:60%;
+    color: #999;
+}
+
+#house-basement-type.set-field {
+    color:#666;
+}
+
+
+.signup-panel {
+    /* background-color: antiquewhite; */
+}
+
+.signup-fieldbox {
+    background-color:white;
+}
+
+.signup-button-confirm {
+    background-color: #fccc34;
+    color:black;
+}
+
+.signup-button-confirm:hover {
+    background-color: #fcd34e;
+}

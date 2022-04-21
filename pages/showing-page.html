@@ -1,0 +1,78 @@
+<!DOCTYPE=html>
+<html>
+  <head>
+    <title>Book a Showing</title>
+    <link rel="stylesheet" href="../mainstyle.css">
+    <link rel="stylesheet" href="../styles/add-listing-style.css"/>
+    <script src="../scripts/add-listing-script.js"></script>
+  </head>
+  <body>
+	<div class="header">
+		<h1 class="site-title" onclick="location.href='../index.html'">Yellow Bricks</h1>
+		<div class="nav-options">
+			<button class="nav-btns" id="header-information" type="button" onclick="location.href='./information.html'">Information</button>
+			<button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUs.html'">Contact Us</button>
+			<button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-page.html'">Consult an Expert</button>
+		</div>
+		<div class="loginStatus">
+			<div class="logincontainer">
+				<a class="loggedout" href="../pages/login-page.html">LogIn</a>
+			</div>
+			<!--<image class="loggedin" src="../media/user-loggedin.png">-->        
+		</div>
+	</div>
+    <div class="signup-panel">
+      <h1 id="signup-title">Book a Showing</h1>
+      <div id="signup-screens">
+	<section>
+	  <h2>Contact Information</h2>
+	  <div class="signup-fieldbox">
+	    <!-- <div class="signup-multi-fieldbox"> -->
+	      <input id="first-name" type="text" pattern="^[a-zA-Z]+$" placeholder="First Name"/>
+	      <!-- <div class="vr"></div> -->
+	      <hr>
+	      <input id="last-name" type="text" pattern="^[a-zA-Z]+$" placeholder="Last Name"/>
+	      <!-- </div> -->
+	    <!-- <hr> -->
+	    <!-- <input id="email" type="email" placeholder="Email Address"/> -->
+	  </div>
+
+	  <div class="signup-fieldbox">
+	    <input id="email" type="email" placeholder="Email Address"/>
+	    <hr>
+	    <input id="phone-number" maxlength="12" placeholder="Phone Number"/>
+	  </div>
+	</section>
+	
+	<section>
+	  <h2>Showing Time</h2>
+	  <div class="signup-fieldbox" >
+	    <div class="field-wrap" id="date-field">
+	      <label>Date</label>
+	      <input id="show-date" type="date" onchange="setFieldChanged('date-field');"/>
+	    </div>
+	    <hr>
+	    <div class="field-wrap" id="time-field">
+	      <label>Time</label>
+	      <input id="show-time" type="time" onchange="setFieldChanged('time-field');"/>
+	    </div>
+	  </div>
+	</section>
+	
+	<section id="success-page">
+	  <p class="signup-success-text">Showing request submitted!</p>
+	</section>
+      </div>
+      <p id="signup-error"></p>
+      <div id="signup-nav-buttons" class="signup-nav">
+	<button class="signup-button" id="signup-prev" onclick="prev();">Previous</button>
+	<button class="signup-button-confirm" id="signup-next" onclick="next();">Next</button>
+      </div>
+      <div class="signup-nav signup-nav-finish" id="signup-finish-buttons">
+	<button class="signup-button-confirm" onclick="continueToMain();">Finish</button>
+      </div>
+    </div>
+
+    <script>startShowing();</script>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE=html>
+<html>
+  <head>
+    <title>Selling your Home</title>
+    <link rel="stylesheet" href="../mainstyle.css">
+    <link rel="stylesheet" href="../styles/add-listing-style.css"/>
+    <!-- <link rel="stylesheet" href="../styles/signup-style.css"/> -->
+    <script src="../scripts/add-listing-script.js"></script>
+  </head>
+  <body>
+	<div class="header">
+		<h1 class="site-title" onclick="location.href='../index.html'">Yellow Bricks</h1>
+		<div class="nav-options">
+			<button class="nav-btns" id="header-information" type="button" onclick="location.href='./information.html'">Information</button>
+			<button class="nav-btns" id="header-contactus" type="button" onclick="location.href='./ContactUs.html'">Contact Us</button>
+			<button class="nav-btns" id="header-contactexpert" type="button" onclick="location.href='./expert-page.html'">Consult an Expert</button>
+		</div>
+		<div class="loginStatus">
+			<div class="logincontainer">
+				<a class="loggedout" href="../pages/login-page.html">LogIn</a>
+			</div>
+			<!--<image class="loggedin" src="../media/user-loggedin.png">-->        
+		</div>
+	</div>
+    <div class="signup-panel">
+      <h1 id="signup-title">Selling your home</h1>
+      <div id="signup-screens">
+	<section>
+	  <h2>Contact Information</h2>
+	  <div class="signup-fieldbox">
+	    <!-- <div class="signup-multi-fieldbox"> -->
+	      <input id="first-name" type="text" pattern="^[a-zA-Z]+$" placeholder="First Name"/>
+	      <!-- <div class="vr"></div> -->
+	      <hr>
+	      <input id="last-name" type="text" pattern="^[a-zA-Z]+$" placeholder="Last Name"/>
+	    <!-- </div> -->
+	    <!-- <hr> -->
+	    <!-- <input id="email" type="email" placeholder="Email Address"/> -->
+	  </div>
+
+	  <div class="signup-fieldbox">
+	    <input id="email" type="email" placeholder="Email Address"/>
+	    <hr>
+	    <input id="phone-number" maxlength="12" placeholder="Phone Number"/>
+	  </div>
+	  <!-- <div class="signup-fieldbox"> -->
+	  <!--   <div class="signup-multi-fieldbox"> -->
+	  <!--     <input id="first-name" type="text" pattern="^[a-zA-Z]+$" placeholder="First Name"/> -->
+	  <!--     <div class="vr"></div> -->
+	  <!--     <input id="last-name" type="text" pattern="^[a-zA-Z]+$" placeholder="Last Name"/> -->
+	  <!--   </div> -->
+	  <!--   <hr> -->
+	  <!--   <input id="email" type="email" placeholder="Email Address"/> -->
+	    
+	  <!-- </div> -->
+	  
+	  <!-- <div class="signup-fieldbox"> -->
+	  <!--   <input id="username" placeholder="Username"/> -->
+	  <!--   <hr> -->
+	  <!--   <div class="signup-pass-container"> -->
+	  <!--     <input id="password" type="password" placeholder="Password"/> -->
+	  <!--     <button class="pass-vis-button" tabindex="-1" id="show-pass-button" onclick="togglePassword();"></button> -->
+	  <!--   </div> -->
+	    
+	  <!--   <hr> -->
+	  <!--   <input id="pass-confirm" type="password" placeholder="Confirm Password"/> -->
+	  <!-- </div> -->
+	</section>
+	
+	<section>
+	  <h2>Location Information</h2>
+
+	  <div class="signup-fieldbox">
+	    <input placeholder="Street Name"/>
+	    <hr>
+	    <input placeholder="City"/>
+	    <hr>
+	    <div class="signup-multi-fieldbox">
+	      <!-- <input placeholder="Province"/> -->
+	      <select id="province-select" onchange="provinceChanged();" name="Province">
+		<option value="" disabled selected>Province</option>
+		<option value="Alberta">Alberta</option>
+		<option value="British Columbia">British Columbia</option>
+		<option value="Manitoba">Manitoba</option>
+		<option value="New Brunswick">New Brunswick</option>
+		<option value="Newfoundland & Labrador">Newfoundland</option>
+		<option value="North West Territories">North West Territories</option>
+		<option value="Nova Scotia">Nova Scotia</option>
+		<option value="Nunavut">Nunavut</option>
+		<option value="Ontario">Ontario</option>
+		<option value="Prince Edward Island">Prince Edward Island</option>
+		<option value="Quebec">Quebec</option>
+		<option value="Saskatchewan">Saskatchewan</option>
+		<option value="Yukon">Yukon</option>
+		
+	      </select>
+	      <div class="vr"></div>
+	      <input id="postal-code" class="upcase" maxlength="7" placeholder="Postal Code"/>
+	    </div>
+	  </div>
+
+	  <div class="signup-fieldbox">
+	    <select id="house-type-select" name="House Type" onchange="setFieldChanged('house-type-select');">
+	      <option value="" disabled selected>House Type</option>
+	      <option value="studio">Studio</option>
+	      <option value="apartment">Apartment</option>
+	      <option value="condo-town">Condo Townhouse</option>
+	      <option value="townhouse">Townhouse</option>
+	      <option value="semi">Semi-Detached</option>
+	      <option value="detached">Detached</option>
+	    </select>
+	  </div>
+	</section>
+
+	<section>
+	  
+	  <h2 id="home-type-title">Home Type</h2>
+	  
+	  <div id="house-detail-screens">
+
+	    <!-- Apartment Homes -->
+	    <section id="apartment-screen">
+	      <div class="signup-fieldgroup">
+		<div class="signup-fieldbox signup-numbox">
+		  <div class="numbox">
+		    <label>Floors</label>
+		    <input id="apartment-floor-count" placeholder="0"/>
+		  </div>
+		</div>
+
+		<div class="signup-fieldbox signup-numbox">
+		  <div class="numbox" style="width:150px;">
+		    <label>Square Footage</label>
+		    <input id="apartment-footage" placeholder="0"/>
+		  </div>
+		</div>
+	      </div>
+
+	      <div class="signup-fieldbox signup-numbox">
+		<div class="signup-multi-fieldbox">
+		  <div class="numbox">
+		    <label>Bedrooms</label>
+		    <input id="apartment-bed-num" placeholder="0" />
+		  </div>
+		  <div class="vr"></div>
+		  <div class="numbox">
+		    <label>Bathrooms</label>
+		    <input id="apartment-bath-num" placeholder="0" />
+		  </div>
+		  <div class="vr"></div>
+		  <div class="numbox" style="width:150px;">
+		    <label>Parking Spaces</label>
+		    <input id="appartment-park-num" placeholder="0" />
+		  </div>
+		</div>
+		
+	      </div>
+	    </section>
+	    
+	    <!-- Townhouse, semi-detached, detached -->
+	    <section id="house-screen">
+	      <div class="signup-fieldgroup">
+		<div class="signup-fieldbox signup-numbox">
+		  <div class="numbox">
+		    <label>Floors</label>
+		    <input id="house-floor-count" placeholder="0"/>
+		  </div>
+		</div>
+
+		<div class="signup-fieldbox signup-numbox">
+		  <div class="numbox" style="width:150px;">
+		    <label>Square Footage</label>
+		    <input id="house-footage" placeholder="0"/>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <div class="signup-fieldbox signup-numbox">
+		<div class="signup-multi-fieldbox">
+		  <div class="numbox">
+		    <label>Bedrooms</label>
+		    <input id="house-bed-num" placeholder="0" />
+		  </div>
+		  <div class="vr"></div>
+		  <div class="numbox">
+		    <label>Bathrooms</label>
+		    <input id="house-bath-num" placeholder="0" />
+		  </div>
+		  <div class="vr"></div>
+		  <div class="numbox">
+		    <label>Garages</label>
+		    <input id="house-garage-num" placeholder="0" />
+		  </div>
+		</div>
+		<hr>
+		<label style="text-align:left;margin-top:10px;">Basement Type</label>
+		<select style="height:30px" id="house-basement-type" name="Basement Type" onchange="setFieldChanged('house-basement-type');">
+		  <option value="" disabled selected>Pick One</option>
+		  <option value="no-basement">No Basement</option>
+		  <option value="unfinished">Unfinished Basement</option>
+		  <option value="finished">Finished Basement</option>
+		</select>
+	      </div>
+	    </section>
+
+	    <!-- Studio Houses -->
+	    <section id="studio-screen">
+	      <div class="signup-fieldgroup">
+		<div class="signup-fieldbox signup-numbox">
+		  <div class="numbox">
+		    <label>Floors</label>
+		    <input id="studio-floor-count" placeholder="0"/>
+		  </div>
+		</div>
+
+		<div class="signup-fieldbox signup-numbox">
+		  <div class="numbox" style="width:150px;">
+		    <label>Square Footage</label>
+		    <input id="studio-footage" placeholder="0"/>
+		  </div>
+		</div>
+	      </div>
+
+	      <div class="signup-fieldbox signup-numbox">
+		<div class="numbox" style="width:150px;">
+		  <label>Parking Spaces</label>
+		  <input id="studio-park-num" placeholder="0" />
+		</div>
+	      </div>
+	    </section>
+
+	    <section id="condo-screen">
+	      <div class="signup-fieldgroup">
+		<div class="signup-fieldbox signup-numbox">
+		  <div class="numbox">
+		    <label>Floors</label>
+		    <input id="condo-floor-count" placeholder="0"/>
+		  </div>
+		</div>
+
+		<div class="signup-fieldbox signup-numbox">
+		  <div class="numbox" style="width:150px;">
+		    <label>Square Footage</label>
+		    <input id="condo-footage" placeholder="0"/>
+		  </div>
+		</div>
+	      </div>
+	    </section>
+	    
+	  </div>
+	</section>
+
+	<section>
+	  <h2>Upload Images</h2>
+	  <div class="signup-photo-panel" id="photo-list">
+	    
+	    <div id="add-photo-button" class="photobox add-photo-button" onclick="addHouseImage();">
+	      <p>Add Image</p>
+	      <p class="add-photo-icon">+</p>
+	    </div>
+	  </div>
+	</section>
+	
+	<section id="success-page">
+	  <p class="signup-success-text">Your sell request has been submitted for verification</p>
+	  <button class="signup-button-confirm" onclick="continueToMain();">Finish</button>
+	</section>
+      </div>
+      <p id="signup-error"></p>
+      <div id="signup-nav-buttons" class="signup-nav">
+	<button class="signup-button" id="signup-prev" onclick="prev();">Previous</button>
+	<button class="signup-button-confirm" id="signup-next" onclick="next();">Next</button>
+      </div>
+      <div class="signup-nav signup-nav-finish" id="signup-finish-buttons">
+	<button class="signup-button-confirm" onclick="continueToMain();">Finish</button>
+      </div>
+    </div>
+
+    <script>startListing();</script>
+  </body>
+</html>
