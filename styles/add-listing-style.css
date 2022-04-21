@@ -469,6 +469,10 @@ label {
     color: #999;
 }
 
+.check-list>.field-wrap>input {
+    width:20px;
+}
+
 #house-basement-type.set-field {
     color:#666;
 }
