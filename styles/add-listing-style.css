@@ -14,7 +14,9 @@ h2 {
 .signup-panel {
     background-color: #FFF;
     width:600px;
-    height:600px;
+    /* height:600px; */
+
+    min-height: 600px;
     
     /* position:absolute; */
     /* top:50%; */
@@ -31,6 +33,10 @@ h2 {
     border-radius: 16px;
     border: 1px solid #CCC;
     overflow:hidden;
+}
+
+#signup-screens {
+    margin-bottom: 50px;
 }
 
 h1, h2{
@@ -433,6 +439,7 @@ input:focus:invalid {
     text-align:center;
     margin:0;
     margin-top:-15px;
+    cursor: pointer;
 }
 
 
@@ -469,9 +476,96 @@ label {
     color: #999;
 }
 
-.check-list>.field-wrap>input {
-    width:20px;
+.check-list-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
+
+.check-list .field-wrap:hover label {
+    color:#888;
+}
+
+.check-list .field-wrap:hover .signup-checkbox {
+    border-color:#888;
+}
+
+.check-list .field-wrap:active .signup-checkbox {
+    border-color:#333;
+}
+
+.check-list .field-wrap.set-field .signup-checkbox {
+    /* border-color:black; */
+    border-color:transparent;
+    /* background-color:#333; */
+    background-color:#666;
+}
+
+.check-list .field-wrap:hover.set-field .signup-checkbox {
+    /* border-color:black; */
+    border-color:transparent;
+    background-color:#555;
+}
+
+.check-list .field-wrap:active.set-field .signup-checkbox .check {
+    /* border-color:black; */
+    display:none;
+}
+
+
+
+.check-list .field-wrap:hover.set-field label {
+    color:#555;
+}
+
+.check-list .field-wrap:hover.set-field label {
+    color:#555;
+}
+
+.check-list .field-wrap:active label {
+    color:#333;
+}
+
+.check {
+    display:none;
+    margin-left:3px;
+    margin-top: 1px;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.check-list .field-wrap.set-field .check {
+    display: block;
+}
+
+.signup-checkbox {
+    width:14px;
+    height: 14px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+
+.check-list-title {
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    display:block;
+    margin-bottom: 15px;
+}
+
+.check-list .field-wrap>label {
+    user-select: none;
+}
+.check-list .field-wrap>input {
+    /* width:20px; */
+    display:none;
+}
+
+
 
 #house-basement-type.set-field {
     color:#666;
@@ -493,4 +587,84 @@ label {
 
 .signup-button-confirm:hover {
     background-color: #fcd34e;
+}
+
+
+.home-description-box {
+    width:100%;
+}
+
+.home-description-box textarea {
+    width:100%;
+    font-family: 'Varela Round', sans-serif;
+    font-size:12pt;
+    resize:none;
+    background-color:#F8F8F8;
+    padding:20px;
+    border:2px solid #CCC;
+    border-radius:5px
+
+}
+
+.home-description-box textarea::placeholder {
+    color:#AAA;
+}
+
+.home-description-box textarea:focus {
+    background-color:white;
+    border-color: #999;
+}
+
+.home-description-box textarea:focus::placeholder {
+    color:#CCC;
+}
+
+
+.review-panel {
+    
+}
+
+.review-panel p, .review-panel label {
+    font-family: 'Varela Round', sans-serif;
+    font-size:12pt;
+}
+
+#review-house-img {
+    width:100%;
+    height:auto;
+    
+}
+
+#review-page .signup-fieldbox {
+    border-color: #CCC;
+}
+
+#review-page label {
+    color:#999;
+}
+
+.center-field {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+/* #review-page .signup-multi-fieldbox { */
+/*     justify-content: space-around; */
+/* } */
+
+#review-page .signup-fieldbox hr {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+#review-page .signup-multi-fieldbox .vr {
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+#review-page .signup-fieldbox p {
+    color:#555;
+    margin:5px;
 }

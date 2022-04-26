@@ -11,6 +11,10 @@ const DEBUG_SCREEN_START = 0;
 
 var stepNum = 100;
 
+function findId(id){
+    return document.getElementById(id);
+}
+
 function start(){
     var screens = document.getElementById("signup-screens").children;
 
@@ -43,7 +47,7 @@ function startListing(){
     document.getElementById("postal-code").onkeypress = postalCodeChanged;
     document.getElementById("postal-code").onkeyup = postalCodeRelease;
     document.getElementById("house-type-select").addEventListener("change",onHouseTypeChange);
-    stepNum = 4;
+    stepNum = 5;
 }
 
 // start function for book showing page
@@ -84,6 +88,10 @@ function next(skip = false){
     //screens[steps].classList.add("test-anim");
     screens[steps+1].style.display = "block";
     steps += 1;
+
+    if(screens[steps].id === "review-page"){
+	loadReviewPage();
+    }
 
     document.getElementById("signup-prev").disabled = false;
 
@@ -452,4 +460,48 @@ function onShowTimeChanged(){
 function setFieldChanged(fieldName) {
     var field = document.getElementById(fieldName);
     field.classList.add("set-field");
+}
+
+
+function checkboxCheck(ev){
+    var tar = ev.currentTarget
+    var checkbox = tar.getElementsByTagName("input")[0];
+    checkbox.checked = !checkbox.checked;
+    if(checkbox.checked && !tar.classList.contains("set-field")){
+	tar.classList.add("set-field");
+    }
+    if(!checkbox.checked && tar.classList.contains("set-field")){
+	tar.classList.remove("set-field");
+    }
+}
+
+function loadReviewPage(){
+    // var img = document.getElementById("review-house-img");
+    // var imgList = document.getElementById("photo-list").getElementsByTagName("img");
+    // if(imgList.length > 0){
+    // 	img.src = imgList[0].src;
+    // }
+
+    var fName = loadToReview("first-name");
+    var lName = loadToReview("last-name");
+    findId("review-name").innerHTML = fName + " " + lName;
+
+    loadToReview("phone-number","review-phone");
+    loadToReview("email","review-email");
+    loadToReview("address","review-address");
+    loadToReview("city","review-city");
+    loadToReview("province-select","review-province");
+    var postal = loadToReview("postal-code");
+    findId("review-postal").innerHTML = postal.toUpperCase();
+}
+
+function loadToReview(sourceId, destId=""){
+    var srcValue = document.getElementById(sourceId).value;
+    
+    if(!(destId === "")){
+	var destElement = document.getElementById(destId);
+	destElement.innerHTML = srcValue;
+    }
+
+    return srcValue;
 }

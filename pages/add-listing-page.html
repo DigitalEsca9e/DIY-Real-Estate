@@ -74,9 +74,9 @@
 	  <h2>Location Information</h2>
 
 	  <div class="signup-fieldbox">
-	    <input placeholder="Street Name"/>
+	    <input id="address" placeholder="Address"/>
 	    <hr>
-	    <input placeholder="City"/>
+	    <input id="city" placeholder="City"/>
 	    <hr>
 	    <div class="signup-multi-fieldbox">
 	      <!-- <input placeholder="Province"/> -->
@@ -126,8 +126,8 @@
 	      <div class="signup-fieldgroup">
 		<div class="signup-fieldbox signup-numbox">
 		  <div class="numbox">
-		    <label>Floors</label>
-		    <input id="apartment-floor-count" placeholder="0"/>
+		    <label>Floor Number</label>
+		    <input id="apartment-floor-number" placeholder="0"/>
 		  </div>
 		</div>
 
@@ -150,13 +150,100 @@
 		    <label>Bathrooms</label>
 		    <input id="apartment-bath-num" placeholder="0" />
 		  </div>
-		  <div class="vr"></div>
-		  <div class="numbox" style="width:150px;">
-		    <label>Parking Spaces</label>
-		    <input id="appartment-park-num" placeholder="0" />
-		  </div>
+		  <!-- <div class="vr"></div> -->
+		  <!-- <div class="numbox" style="width:150px;"> -->
+		  <!--   <label>Parking Spaces</label> -->
+		  <!--   <input id="apartment-park-num" placeholder="0" /> -->
+		  <!-- </div> -->
 		</div>
 		
+	      </div>
+
+	      <div class="signup-fieldbox check-list" style="width:70%;">
+		<div class="signup-multi-fieldbox">
+		  <div class="check-list-container" style="width:60%;">
+		    <label class="check-list-title">Utilities</label>
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Air Conditioner</label>
+		      <input type="checkbox" id="apartment-util-air"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Heating</label>
+		      <input type="checkbox" id="apartment-util-heat"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <hr style="margin-top:15px;margin-bottom:15px;">
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Stairs</label>
+		      <input type="checkbox" id="apartment-util-stairs"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Elevator</label>
+		      <input type="checkbox" id="apartment-util-elevator"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <hr style="margin-top:15px;margin-bottom:15px;">
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Dishwasher</label>
+		      <input type="checkbox" id="apartment-util-washer"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Laundry</label>
+		      <input type="checkbox" id="apartment-util-laundry"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		  </div>
+
+		  <div class="vr"></div>
+		  
+		  <div class="check-list-container" style="width:40%;">
+		    <label class="check-list-title">Features</label>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Gym</label>
+		      <input type="checkbox" id="apartment-feat-gym"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    
+		    
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Pool</label>
+		      <input type="checkbox" id="apartment-feat-pool"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Sauna</label>
+		      <input type="checkbox" id="apartment-feat-sauna"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <hr style="margin-top:15px;margin-bottom:15px;">
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Roof Access</label>
+		      <input type="checkbox" id="apartment-feat-roof"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Balcony</label>
+		      <input type="checkbox" id="apartment-feat-balcony"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		  </div>
+		  
+		</div>
 	      </div>
 	    </section>
 	    
@@ -205,42 +292,56 @@
 		</select>
 	      </div>
 
-	      <!-- <div class="signup-fieldbox check-list" style="width:70%;"> -->
-	      <!-- 	<div class="signup-multi-fieldbox"> -->
-	      <!-- 	  <div style="width:60%;"> -->
-	      <!-- 	    <div class="field-wrap"> -->
-	      <!-- 	      <label>Air Conditioner</label> -->
-	      <!-- 	      <input type="checkbox" id="home-util-air"/> -->
-	      <!-- 	    </div> -->
-	      <!-- 	    <div class="field-wrap"> -->
-	      <!-- 	      <label>Heating</label> -->
-	      <!-- 	      <input type="checkbox" id="home-util-heat"/> -->
-	      <!-- 	    </div> -->
+	      <div class="signup-fieldbox check-list" style="width:70%;">
+		<div class="signup-multi-fieldbox">
+		  <div class="check-list-container" style="width:60%;">
+		    <label class="check-list-title">Utilities</label>
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Air Conditioner</label>
+		      <input type="checkbox" id="home-util-air"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Heating</label>
+		      <input type="checkbox" id="home-util-heat"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
 
-	      <!-- 	    <hr> -->
+		    <hr style="margin-top:15px;margin-bottom:15px;">
 
-	      <!-- 	    <div class="field-wrap"> -->
-	      <!-- 	      <label>Dishwasher</label> -->
-	      <!-- 	      <input type="checkbox" id="home-util-washer"/> -->
-	      <!-- 	    </div> -->
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Dishwasher</label>
+		      <input type="checkbox" id="home-util-washer"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
 
-	      <!-- 	    <div class="field-wrap"> -->
-	      <!-- 	      <label>Laundry</label> -->
-	      <!-- 	      <input type="checkbox" id="home-util-laundry"/> -->
-	      <!-- 	    </div> -->
-	      <!-- 	  </div> -->
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Laundry</label>
+		      <input type="checkbox" id="home-util-laundry"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		  </div>
 
-	      <!-- 	  <div class="vr"></div> -->
+		  <div class="vr"></div>
 		  
-	      <!-- 	  <div> -->
-	      <!-- 	    <div class="field-wrap"> -->
-	      <!-- 	      <label>Pool</label> -->
-	      <!-- 	      <input type="checkbox" id="home-feat-pool"/> -->
-	      <!-- 	    </div> -->
-	      <!-- 	  </div> -->
+		  <div class="check-list-container" style="width:40%;">
+		    <label class="check-list-title">Features</label>
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Pool</label>
+		      <input type="checkbox" id="home-feat-pool"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Driveway</label>
+		      <input type="checkbox" id="home-feat-driveway"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		  </div>
 		  
-	      <!-- 	</div> -->
-	      <!-- </div> -->
+		</div>
+	      </div>
+	      
 	    </section>
 
 	    <!-- Studio Houses -->
@@ -267,6 +368,96 @@
 		  <input id="studio-park-num" placeholder="0" />
 		</div>
 	      </div>
+
+
+	      <div class="signup-fieldbox check-list" style="width:70%;">
+		<div class="signup-multi-fieldbox">
+		  <div class="check-list-container" style="width:60%;">
+		    <label class="check-list-title">Utilities</label>
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Air Conditioner</label>
+		      <input type="checkbox" id="studio-util-air"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Heating</label>
+		      <input type="checkbox" id="studio-util-heat"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <hr style="margin-top:15px;margin-bottom:15px;">
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Stairs</label>
+		      <input type="checkbox" id="studio-util-stairs"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Elevator</label>
+		      <input type="checkbox" id="studio-util-elevator"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <hr style="margin-top:15px;margin-bottom:15px;">
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Dishwasher</label>
+		      <input type="checkbox" id="studio-util-washer"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Laundry</label>
+		      <input type="checkbox" id="studio-util-laundry"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		  </div>
+
+		  <div class="vr"></div>
+		  
+		  <div class="check-list-container" style="width:40%;">
+		    <label class="check-list-title">Features</label>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Gym</label>
+		      <input type="checkbox" id="studio-feat-gym"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    
+		    
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Pool</label>
+		      <input type="checkbox" id="studio-feat-pool"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Sauna</label>
+		      <input type="checkbox" id="studio-feat-sauna"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <hr style="margin-top:15px;margin-bottom:15px;">
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Roof Access</label>
+		      <input type="checkbox" id="studio-feat-roof"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+
+		    <div class="field-wrap" onclick="checkboxCheck(event);">
+		      <label>Balcony</label>
+		      <input type="checkbox" id="studio-feat-balcony"/>
+		      <div class="signup-checkbox"><div class="check"></div></div>
+		    </div>
+		  </div>
+		  
+		</div>
+	      </div>
+
+	      
 	    </section>
 
 	    <section id="condo-screen">
@@ -291,13 +482,70 @@
 	</section>
 
 	<section>
-	  <h2>Upload Images</h2>
+	  <h2>Description and Images</h2>
+
+	  <div class="home-description-box">
+	    <textarea placeholder="Write a description for your home..." rows="8"></textarea>
+	  </div>
 	  <div class="signup-photo-panel" id="photo-list">
 	    
 	    <div id="add-photo-button" class="photobox add-photo-button" onclick="addHouseImage();">
 	      <p>Add Image</p>
 	      <p class="add-photo-icon">+</p>
 	    </div>
+	  </div>
+	</section>
+
+	<section id="review-page">
+	  <h2>Review Information</h2>
+	  <div class="review-panel">
+	    <!-- <img id="review-house-img" src="" /> -->
+
+	    <div class="signup-fieldbox">
+	      <div class="center-field">
+		<label>Name</label>
+		<p><span id="review-name"></span></p>
+	      </div>
+	      <div class="center-field">
+		<label>Email</label>
+		<p><span id="review-email"></span></p>
+	      </div>
+	      <div class="center-field">
+		<label>Phone Number</label>
+		<p><span id="review-phone"></span></p>
+	      </div>
+	    </div>
+	    
+	    
+	    <br>
+	    <div class="signup-fieldbox">
+	      
+	      <div class="center-field">
+		<label>Address</label>
+		<p><span id="review-address"></span></p>
+	      </div>
+	      <!-- <hr> -->
+	      <div class="center-field">
+		<label>City</label>
+		<p><span id="review-city"></span></p>
+	      </div>
+	      <div class="center-field">
+		<label>Province</label>
+		<p><span id="review-province"></span></p>
+	      </div>
+	      <div class="center-field">
+		<label>Postal Code</label>
+		<p><span id="review-postal"></span></p>
+	      </div>
+	      
+	      <!-- <div class="center-field"> -->
+
+	      <!-- 	<p><span id="review-city"></span>, <span id="review-province"></span> <span id="review-postal"></span></p> -->
+		
+	      <!-- </div> -->
+	    </div>
+
+	    
 	  </div>
 	</section>
 	
