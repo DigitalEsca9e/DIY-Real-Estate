@@ -11,6 +11,8 @@ const DEBUG_SCREEN_START = 0;
 
 var stepNum = 100;
 
+var didCheckboxInit = false;
+
 function findId(id){
     return document.getElementById(id);
 }
@@ -48,6 +50,8 @@ function startListing(){
     document.getElementById("postal-code").onkeyup = postalCodeRelease;
     document.getElementById("house-type-select").addEventListener("change",onHouseTypeChange);
     stepNum = 5;
+
+    initHomeDetailsPage();
 }
 
 // start function for book showing page
@@ -88,6 +92,13 @@ function next(skip = false){
     //screens[steps].classList.add("test-anim");
     screens[steps+1].style.display = "block";
     steps += 1;
+
+    if(screens[steps].id === "location-page"){
+	loadLocationPage();
+    }
+    if(screens[steps].id === "house-details-page"){
+	initHomeDetailsPage();
+    }
 
     if(screens[steps].id === "review-page"){
 	loadReviewPage();
@@ -282,7 +293,9 @@ function showError(fieldName,errorMessage){
 
 function provinceChanged(){
     var prov = document.getElementById("province-select");
-    prov.classList.add('signup-select-picked');
+    // prov.classList.add('signup-select-picked');
+    prov.classList.add('set-field');
+
     // if(prov.value == "none"){
     // 	if(prov.classList.contains('signup-select-picked'))
     // 	    prov.classList.remove('signup-select-picked');
@@ -418,11 +431,15 @@ function removeImage(ev){
 function onHouseTypeChange(ev){
     var houseScreens = document.getElementById("house-detail-screens").children;
     //alert("House Type Changed: " + ev.target.value);
+
+    var newVal = findId("house-type-select").value;
+    
     for(var i = 0; i < houseScreens.length;i++){
 	houseScreens[i].style.display = "none";
     }
     
-    switch(ev.target.value){
+    // switch(ev.target.value){
+    switch(newVal){
     case "detached":
     case "semi":
     case "townhouse":
@@ -441,7 +458,8 @@ function onHouseTypeChange(ev){
 
     var typeOptions = document.getElementById("house-type-select").children;
     for(var i = 0; i < typeOptions.length;i++){
-	if(typeOptions[i].value === ev.target.value){
+	// if(typeOptions[i].value === ev.target.value){
+	if(typeOptions[i].value === newVal){
 	    document.getElementById("home-type-title").innerHTML = typeOptions[i].innerHTML;
 	    return;
 	}
@@ -456,6 +474,14 @@ function onShowTimeChanged(){
     timeDetails.innerHTML = date.value + " at " + time.value;
 }
 
+function updateFieldChanged(fieldName){
+    var field = findId(fieldName);
+    if(!(field.value === "")){
+	field.classList.add("set-field");
+	return true;
+    }
+    return false;
+}
 
 function setFieldChanged(fieldName) {
     var field = document.getElementById(fieldName);
@@ -472,6 +498,33 @@ function checkboxCheck(ev){
     }
     if(!checkbox.checked && tar.classList.contains("set-field")){
 	tar.classList.remove("set-field");
+    }
+}
+
+function initHomeDetailsPage(){
+    var homeScreens = findId("house-detail-screens");
+    var inputs = homeScreens.getElementsByTagName("input");
+    
+    for(var i = 0; i < inputs.length;i++){
+	if(inputs[i].type === "checkbox"){
+	    var checkbox = inputs[i];
+	    var checkContainer = checkbox.parentElement;
+	    
+	    if(checkbox.checked && !checkContainer.classList.contains("set-field")){
+		checkContainer.classList.add("set-field");
+	    }
+	    
+	}
+    }
+    updateFieldChanged("house-basement-type");
+}
+
+function loadLocationPage(){
+    if(updateFieldChanged("house-type-select")){
+	onHouseTypeChange();
+    }
+    if(updateFieldChanged("province-select")){
+	provinceChanged();
     }
 }
 
@@ -493,10 +546,197 @@ function loadReviewPage(){
     loadToReview("province-select","review-province");
     var postal = loadToReview("postal-code");
     findId("review-postal").innerHTML = postal.toUpperCase();
+
+    var homeScreens = findId("review-hometype-screens").children;
+
+    for(var i = 0; i < homeScreens.length; i++){
+	homeScreens[i].style.display = "none";
+    }
+
+    
+
+    var homeType = loadToReview("house-type-select");
+
+    var homeStr = "";
+    switch(homeType){
+    case "detached":
+	homeStr = "Detached";
+	break;
+    case "semi":
+	homeStr = "Semi-Detached";
+	break;
+    case "townhouse":
+	homeStr = "Townhouse";
+	break;
+    case "condo-town":
+	homeStr = "Condo Townhouse";
+	break;
+    case "apartment":
+	homeStr = "Apartment";
+	break;
+    case "studio":
+	homeStr = "Studio";
+    }
+    // var homeStr = homeType.charAt(0).toUpperCase() + homeType.slice(1);
+     findId("review-hometype").innerHTML = homeStr;
+
+    var screenSel = null;
+    switch(homeType){
+    case "detached":
+    case "semi":
+    case "townhouse":
+	
+	screenSel = findId("review-house-screen");
+	loadToReview("house-floor-count", "review-house-floors","1");
+	loadToReview("house-footage","review-house-footage","0");
+	
+	loadToReview("house-bed-num","review-house-beds","0");
+	loadToReview("house-bath-num","review-house-baths","0");
+	loadToReview("house-garage-num","review-house-garages","0");
+
+	var basementStatus = loadToReview("house-basement-type");
+	var basementStr = "";
+	switch(basementStatus){
+	case "":
+	case "no-basement":
+	    basementStr = "No Basement";
+	    break;
+	case "unfinished":
+	    basementStr = "Unfinished";
+	    break;
+	case "finished":
+	    basementStr = "Finished";
+	}
+
+	findId("review-house-basement").innerHTML = basementStr;
+
+	var utilIds = [
+	    "house-util-air",
+	    "house-util-heat",
+	    "house-util-washer",
+	    "house-util-laundry"
+	];
+
+	var featIds = [
+	    "house-feat-pool",
+	    "house-feat-driveway"
+	];
+	
+	var utils = getCheckedUtilList(utilIds);
+	populateUtilList(utils,"review-house-utils");
+
+	var feats = getCheckedUtilList(featIds);
+	populateUtilList(feats,"review-house-feats");
+
+	
+	
+	
+	break;
+    case "apartment":
+	screenSel = findId("review-apartment-screen");
+
+	loadToReview("apartment-floor-number","review-apartment-floornum","0");
+	loadToReview("apartment-footage","review-apartment-footage","0");
+	
+	loadToReview("apartment-bed-num","review-apartment-beds","0");
+	loadToReview("apartment-bath-num","review-apartment-baths","0");
+	loadToReview("apartment-park-num","review-apartment-parking","0");
+
+	var utilIds = [
+	    "apartment-util-air",
+	    "apartment-util-heat",
+	    "apartment-util-stairs",
+	    "apartment-util-elevator",
+	    "apartment-util-washer",
+	    "apartment-util-laundry"
+	];
+
+	var featIds = [
+	    "apartment-feat-gym",
+	    "apartment-feat-pool",
+	    "apartment-feat-sauna",
+	    "apartment-feat-roof",
+	    "apartment-feat-balcony",
+	];
+	
+	var utils = getCheckedUtilList(utilIds);
+	populateUtilList(utils,"review-apartment-utils");
+
+	var feats = getCheckedUtilList(featIds);
+	populateUtilList(feats,"review-apartment-feats");
+	
+	break;
+    case "studio":
+	screenSel = findId("review-studio-screen");
+	loadToReview("studio-floor-count","review-studio-floors","1");
+	loadToReview("studio-footage","review-studio-footage","0");
+	loadToReview("studio-park-num","review-studio-parking","0");
+
+	var utilIds = [
+	    "studio-util-air",
+	    "studio-util-heat",
+	    "studio-util-stairs",
+	    "studio-util-elevator",
+	    "studio-util-washer",
+	    "studio-util-laundry"
+	];
+
+	var featIds = [
+	    "studio-feat-gym",
+	    "studio-feat-pool",
+	    "studio-feat-sauna",
+	    "studio-feat-roof",
+	    "studio-feat-balcony",
+	];
+
+	var utils = getCheckedUtilList(utilIds);
+	populateUtilList(utils,"review-studio-utils");
+
+	var feats = getCheckedUtilList(featIds);
+	populateUtilList(feats,"review-studio-feats");
+
+
+	
+	break;
+    case "condo-town":
+	screenSel = findId("review-condo-screen");
+
+	loadToReview("condo-floor-count","review-condo-floors","1");
+	loadToReview("condo-footage","review-condo-footage","0");
+	break;
+    }
+    screenSel.style.display = "block";
 }
 
-function loadToReview(sourceId, destId=""){
+function populateUtilList(stringList, containerId){
+    var container = findId(containerId);
+    container.innerHTML = "";
+    for(var i = 0; i < stringList.length;i++){
+	var item = document.createElement("p");
+	item.innerHTML = stringList[i];
+	container.appendChild(item);
+    }
+}
+
+function getCheckedUtilList(idList){
+    var strList = [];
+    for(var i = 0; i < idList.length;i++){
+	var util = findId(idList[i]);
+	if(util.checked){
+	    var utilName = util.parentElement.getElementsByTagName("label")[0].innerHTML;
+	    strList.push(utilName);
+	}
+    }
+    return strList;
+}
+
+
+function loadToReview(sourceId, destId="",defaultValue=""){
     var srcValue = document.getElementById(sourceId).value;
+
+    if(srcValue === ""){
+	srcValue = defaultValue;
+    }
     
     if(!(destId === "")){
 	var destElement = document.getElementById(destId);

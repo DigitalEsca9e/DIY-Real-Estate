@@ -70,7 +70,7 @@
 	  <!-- </div> -->
 	</section>
 	
-	<section>
+	<section id="location-page">
 	  <h2>Location Information</h2>
 
 	  <div class="signup-fieldbox">
@@ -115,7 +115,7 @@
 	  </div>
 	</section>
 
-	<section>
+	<section id="house-details-page">
 	  
 	  <h2 id="home-type-title">Home Type</h2>
 	  
@@ -150,11 +150,11 @@
 		    <label>Bathrooms</label>
 		    <input id="apartment-bath-num" placeholder="0" />
 		  </div>
-		  <!-- <div class="vr"></div> -->
-		  <!-- <div class="numbox" style="width:150px;"> -->
-		  <!--   <label>Parking Spaces</label> -->
-		  <!--   <input id="apartment-park-num" placeholder="0" /> -->
-		  <!-- </div> -->
+		  <div class="vr"></div>
+		  <div class="numbox" style="width:150px;">
+		    <label>Parking Spaces</label>
+		    <input id="apartment-park-num" placeholder="0" />
+		  </div>
 		</div>
 		
 	      </div>
@@ -253,7 +253,7 @@
 		<div class="signup-fieldbox signup-numbox">
 		  <div class="numbox">
 		    <label>Floors</label>
-		    <input id="house-floor-count" placeholder="0"/>
+		    <input id="house-floor-count" placeholder="1"/>
 		  </div>
 		</div>
 
@@ -298,12 +298,12 @@
 		    <label class="check-list-title">Utilities</label>
 		    <div class="field-wrap" onclick="checkboxCheck(event);">
 		      <label>Air Conditioner</label>
-		      <input type="checkbox" id="home-util-air"/>
+		      <input type="checkbox" id="house-util-air"/>
 		      <div class="signup-checkbox"><div class="check"></div></div>
 		    </div>
 		    <div class="field-wrap" onclick="checkboxCheck(event);">
 		      <label>Heating</label>
-		      <input type="checkbox" id="home-util-heat"/>
+		      <input type="checkbox" id="house-util-heat"/>
 		      <div class="signup-checkbox"><div class="check"></div></div>
 		    </div>
 
@@ -311,13 +311,13 @@
 
 		    <div class="field-wrap" onclick="checkboxCheck(event);">
 		      <label>Dishwasher</label>
-		      <input type="checkbox" id="home-util-washer"/>
+		      <input type="checkbox" id="house-util-washer"/>
 		      <div class="signup-checkbox"><div class="check"></div></div>
 		    </div>
 
 		    <div class="field-wrap" onclick="checkboxCheck(event);">
 		      <label>Laundry</label>
-		      <input type="checkbox" id="home-util-laundry"/>
+		      <input type="checkbox" id="house-util-laundry"/>
 		      <div class="signup-checkbox"><div class="check"></div></div>
 		    </div>
 		  </div>
@@ -328,13 +328,13 @@
 		    <label class="check-list-title">Features</label>
 		    <div class="field-wrap" onclick="checkboxCheck(event);">
 		      <label>Pool</label>
-		      <input type="checkbox" id="home-feat-pool"/>
+		      <input type="checkbox" id="house-feat-pool"/>
 		      <div class="signup-checkbox"><div class="check"></div></div>
 		    </div>
 
 		    <div class="field-wrap" onclick="checkboxCheck(event);">
 		      <label>Driveway</label>
-		      <input type="checkbox" id="home-feat-driveway"/>
+		      <input type="checkbox" id="house-feat-driveway"/>
 		      <div class="signup-checkbox"><div class="check"></div></div>
 		    </div>
 		  </div>
@@ -350,7 +350,7 @@
 		<div class="signup-fieldbox signup-numbox">
 		  <div class="numbox">
 		    <label>Floors</label>
-		    <input id="studio-floor-count" placeholder="0"/>
+		    <input id="studio-floor-count" placeholder="1"/>
 		  </div>
 		</div>
 
@@ -465,7 +465,7 @@
 		<div class="signup-fieldbox signup-numbox">
 		  <div class="numbox">
 		    <label>Floors</label>
-		    <input id="condo-floor-count" placeholder="0"/>
+		    <input id="condo-floor-count" placeholder="1"/>
 		  </div>
 		</div>
 
@@ -538,13 +538,157 @@
 		<p><span id="review-postal"></span></p>
 	      </div>
 	      
-	      <!-- <div class="center-field"> -->
-
-	      <!-- 	<p><span id="review-city"></span>, <span id="review-province"></span> <span id="review-postal"></span></p> -->
-		
-	      <!-- </div> -->
 	    </div>
 
+	    <div class="signup-fieldbox">
+	      <div class="center-field">
+		<label>Home Type</label>
+		<p><span id="review-hometype"></span=></p>
+	      </div>
+	    <div id="review-hometype-screens">
+	      <section id="review-house-screen">
+		<div class="center-field">
+		  <label>Number of Floors</label>
+		  <p id="review-house-floors"></p>
+		</div>
+		<div class="center-field">
+		  <label>Square Footage</label>
+		  <p id="review-house-footage"></p>
+		</div>
+		
+		<hr>
+		
+		<div class="center-field">
+		  <label>Bedrooms</label>
+		  <p id="review-house-beds"></p>
+		</div>
+
+		<div class="center-field">
+		  <label>Bathrooms</label>
+		  <p id="review-house-baths"></p>
+		</div>
+
+		<div class="center-field">
+		  <label>Garages</label>
+		  <p id="review-house-garages"></p>
+		</div>
+
+		<hr>
+
+		<div class="center-field">
+		  <label>Basement</label>
+		  <p id="review-house-basement"></p>
+		</div>
+
+		<hr>
+
+		<div class="signup-multi-fieldbox">
+		  <div class="check-list-container">
+		    <label class="checklist-title">Utilities</label>
+		    <div id="review-house-utils">
+		    </div>
+		  </div>
+		  <div class="vr" style="margin-top:-3px;"></div>
+		  <div class="check-list-container">
+		    <label class="checklist-title">Features</label>
+		    <div id="review-house-feats">
+		    </div>
+		  </div>
+		</div>
+		
+	      </section>
+	      
+	      <section id="review-apartment-screen">
+
+		<div class="center-field">
+		  <label>Number of Floors</label>
+		  <p id="review-apartment-floornum"></p>
+		</div>
+		<div class="center-field">
+		  <label>Square Footage</label>
+		  <p id="review-apartment-footage"></p>
+		</div>
+		
+		<hr>
+		
+		<div class="center-field">
+		  <label>Bedrooms</label>
+		  <p id="review-apartment-beds"></p>
+		</div>
+
+		<div class="center-field">
+		  <label>Bathrooms</label>
+		  <p id="review-apartment-baths"></p>
+		</div>
+
+		<div class="center-field">
+		  <label>Parking Spaces</label>
+		  <p id="review-apartment-parking"></p>
+		</div>
+
+		<hr>
+
+		<div class="signup-multi-fieldbox">
+		  <div class="check-list-container">
+		    <label class="checklist-title">Utilities</label>
+		    <div id="review-apartment-utils">
+		    </div>
+		  </div>
+		  <div class="vr" style="margin-top:-3px;"></div>
+		  <div class="check-list-container">
+		    <label class="checklist-title">Features</label>
+		    <div id="review-apartment-feats">
+		    </div>
+		  </div>
+		</div>
+	      </section>
+	      
+	      <section id="review-studio-screen">
+		<div class="center-field">
+		  <label>Floors</label>
+		  <p id="review-studio-floors"></p>
+		</div>
+
+		<div class="center-field">
+		  <label>Square Footage</label>
+		  <p id="review-studio-footage"></p>
+		</div>
+
+		<div class="center-field">
+		  <label>Parking Spaces</label>
+		  <p id="review-studio-parking"></p>
+		</div>
+
+		<hr>
+
+		<div class="signup-multi-fieldbox">
+		  <div class="check-list-container">
+		    <label class="checklist-title">Utilities</label>
+		    <div id="review-studio-utils">
+		    </div>
+		  </div>
+		  <div class="vr" style="margin-top:-3px;"></div>
+		  <div class="check-list-container">
+		    <label class="checklist-title">Features</label>
+		    <div id="review-studio-feats">
+		    </div>
+		  </div>
+		</div>
+	      </section>
+	      
+	      <section id="review-condo-screen">
+		<div class="center-field">
+		  <label>Floors</label>
+		  <p id="review-condo-floors"></p>
+		</div>
+
+		<div class="center-field">
+		  <label>Square Footage</label>
+		  <p id="review-condo-footage"></p>
+		</div>
+	      </section>
+	    </div>
+	    </div>
 	    
 	  </div>
 	</section>
