@@ -126,15 +126,15 @@
 	      <div class="signup-fieldgroup">
 		<div class="signup-fieldbox signup-numbox">
 		  <div class="numbox">
-		    <label>Floor Number</label>
-		    <input id="apartment-floor-number" placeholder="0"/>
+		    <label>Floor</label>
+		    <input id="apartment-floor-number" placeholder="1" onkeypress="return numOnlyKeyPress(event)"/>
 		  </div>
 		</div>
 
 		<div class="signup-fieldbox signup-numbox">
 		  <div class="numbox" style="width:150px;">
 		    <label>Square Footage</label>
-		    <input id="apartment-footage" placeholder="0"/>
+		    <input id="apartment-footage" placeholder="0" onkeypress="return numOnlyKeyPress(event)" />
 		  </div>
 		</div>
 	      </div>
@@ -143,17 +143,17 @@
 		<div class="signup-multi-fieldbox">
 		  <div class="numbox">
 		    <label>Bedrooms</label>
-		    <input id="apartment-bed-num" placeholder="0" />
+		    <input id="apartment-bed-num" placeholder="0" onkeypress="return numOnlyKeyPress(event)"/>
 		  </div>
 		  <div class="vr"></div>
 		  <div class="numbox">
 		    <label>Bathrooms</label>
-		    <input id="apartment-bath-num" placeholder="0" />
+		    <input id="apartment-bath-num" placeholder="0" onkeypress="return numOnlyKeyPress(event)"/>
 		  </div>
 		  <div class="vr"></div>
 		  <div class="numbox" style="width:150px;">
 		    <label>Parking Spaces</label>
-		    <input id="apartment-park-num" placeholder="0" />
+		    <input id="apartment-park-num" placeholder="0" onkeypress="return numOnlyKeyPress(event)"/>
 		  </div>
 		</div>
 		
@@ -277,8 +277,8 @@
 		    <input id="house-bath-num" placeholder="0" />
 		  </div>
 		  <div class="vr"></div>
-		  <div class="numbox">
-		    <label>Garages</label>
+		  <div class="numbox" style="width:125px;">
+		    <label>Garage Spaces</label>
 		    <input id="house-garage-num" placeholder="0" />
 		  </div>
 		</div>
@@ -482,10 +482,16 @@
 	</section>
 
 	<section>
-	  <h2>Description and Images</h2>
+	  <h2>Pricing and Description</h2>
+
+	  <div class="signup-fieldbox">
+	    <div class="money-wrapper">
+	      $<input id="price-value" class="money-input" placeholder="0.00" />
+	    </div>
+	  </div>
 
 	  <div class="home-description-box">
-	    <textarea placeholder="Write a description for your home..." rows="8"></textarea>
+	    <textarea id="home-description" placeholder="Write a description for your home..." rows="8"></textarea>
 	  </div>
 	  <div class="signup-photo-panel" id="photo-list">
 	    
@@ -500,6 +506,13 @@
 	  <h2>Review Information</h2>
 	  <div class="review-panel">
 	    <!-- <img id="review-house-img" src="" /> -->
+
+	    <div class="signup-fieldbox" style="width:75%">
+	      <img id="review-home-img" />
+	      <p id="review-home-price"></p>
+	      <hr>
+	      <p id="review-home-description">No Description</p>
+	    </div>
 
 	    <div class="signup-fieldbox">
 	      <div class="center-field">
@@ -569,7 +582,7 @@
 		</div>
 
 		<div class="center-field">
-		  <label>Garages</label>
+		  <label>Garage Spaces</label>
 		  <p id="review-house-garages"></p>
 		</div>
 

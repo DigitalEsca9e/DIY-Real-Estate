@@ -253,7 +253,7 @@ h1, h2{
     background-color: #46A;
 }
 
-.signup-button-confirm:focus {
+.signup-button-confirm:active {
     /* border: 3px solid #46A; */
     box-shadow: inset 0px 0px 0px 3px #468;
 }
@@ -667,4 +667,27 @@ label {
 #review-page .signup-fieldbox p {
     color:#555;
     margin:5px;
+}
+
+#review-page img {
+    width:100%;
+}
+
+.money-wrapper {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    font-family: 'Varela Round', sans-serif;
+    font-size:12pt;
+    margin:5px;
+    color:#999;
+}
+
+.money-wrapper.set-field {
+    color: #333;
+}
+
+.money-input {
+    margin: 0;
+    margin-left:5px;
 }

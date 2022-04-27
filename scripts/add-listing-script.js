@@ -31,6 +31,8 @@ function start(){
 
     document.getElementById("signup-finish-buttons").style.display = "none";
 
+    findId("first-name").onkeypress = firstNameKeyPress;
+
     
 
     var phone = document.getElementById("phone-number");
@@ -49,6 +51,11 @@ function startListing(){
     document.getElementById("postal-code").onkeypress = postalCodeChanged;
     document.getElementById("postal-code").onkeyup = postalCodeRelease;
     document.getElementById("house-type-select").addEventListener("change",onHouseTypeChange);
+
+    findId("price-value").onkeypress = moneyInputPress;
+    findId("price-value").oninput = onMoneyInput;
+    findId("price-value").onchange = onMoneyChange;
+    
     stepNum = 5;
 
     initHomeDetailsPage();
@@ -474,6 +481,8 @@ function onShowTimeChanged(){
     timeDetails.innerHTML = date.value + " at " + time.value;
 }
 
+
+
 function updateFieldChanged(fieldName){
     var field = findId(fieldName);
     if(!(field.value === "")){
@@ -534,6 +543,15 @@ function loadReviewPage(){
     // if(imgList.length > 0){
     // 	img.src = imgList[0].src;
     // }
+
+    var imgList = findId("photo-list").getElementsByTagName("img");
+    if(imgList.length > 0)
+	findId("review-home-img").src = imgList[0].src;
+
+    var price = loadToReview("price-value");
+    findId("review-home-price").innerHTML = "$"+price;
+    loadToReview("home-description","review-home-description","No Description");
+    
 
     var fName = loadToReview("first-name");
     var lName = loadToReview("last-name");
@@ -744,4 +762,56 @@ function loadToReview(sourceId, destId="",defaultValue=""){
     }
 
     return srcValue;
+}
+
+
+function moneyFormat(x){
+    var newVal = x.replace(/,/g,"");
+    return newVal.replace(/\B(?=(\d{3})+(?!\d))/g,",");
+}
+
+function onMoneyInput(ev){
+    var startPos = ev.currentTarget.selectionStart;
+    var endPos = ev.currentTarget.selectionEnd;
+    
+    var val = ev.currentTarget.value;
+    ev.currentTarget.value = moneyFormat(val);
+
+    
+}
+
+function moneyInputPress(ev){
+    if(!/[0-9]/.test(ev.key)){
+	return false;
+    }
+}
+
+function numOnlyKeyPress(ev){
+    if(!/[0-9]/.test(ev.key)){
+	return false;
+    }
+}
+
+function onMoneyChange(ev){
+    var field = ev.currentTarget;
+    var par = field.parentElement;
+    if(field.value === ""){
+	if(par.classList.contains("set-field")){
+	    par.classList.remove("set-field");
+	}
+    }else{
+	if(!par.classList.contains("set-field")){
+	    par.classList.add("set-field");
+	}
+    }
+}
+
+function firstNameKeyPress(ev) {
+    if(/ /.test(ev.key)){
+	findId("last-name").focus();
+	return false;
+    }
+    if(!/[a-zA-Z]/.test(ev.key)){
+	return false;
+    }
 }
