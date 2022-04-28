@@ -87,13 +87,11 @@
 			<div id="m-search-range">
 				<div class="m-range-options" id="L-min-price-holder">
 					<label id="L-min-price-label" class="range-option-label">Minimum price</label>
-					<input type="range" value="200000" id="L-min-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
-					<output>200000</output>
+					<input class="numberInput" type="number"  id="L-min-price" step="10000"min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
 				</div>
 				<div class="m-range-options" id="L-max-price-holder">
 					<label id="L-max-price-label" class="range-option-label">Maximum price</label>
-					<input type="range" value="200000" id="L-max-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
-					<output>200000</output>
+					<input class="numberInput" type="number"  id="L-max-price" step="10000" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
 				</div>
 			</div>    
 		</div>

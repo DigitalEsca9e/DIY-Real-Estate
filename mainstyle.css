@@ -163,6 +163,10 @@ body{
     border-radius: 20px;
     border: none;
 }
+.numberInput{
+    border-radius: 10px;
+    border: 1px solid;
+}
 /*contact us page styling*/
 #ContactUsPage{
     width: 100%;
