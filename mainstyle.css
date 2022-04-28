@@ -510,3 +510,13 @@ label{
     background: transparent;
     border: none;
 }
+#texts
+{
+font-family: 'Varela Round', sans-serif;
+padding: 5px;
+display: block;
+line-height: 1.8;
+margin-left: auto;
+margin-right: auto;
+}
+
