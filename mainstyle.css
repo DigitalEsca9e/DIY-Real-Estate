@@ -163,6 +163,11 @@ body{
     border-radius: 20px;
     border: none;
 }
+.numberInput{
+    border-radius: 10px;
+    border: 1px solid;
+    font-family: 'Varela Round', sans-serif;
+}
 /*contact us page styling*/
 #ContactUsPage{
     width: 100%;
@@ -510,3 +515,13 @@ label{
     background: transparent;
     border: none;
 }
+#texts
+{
+font-family: 'Varela Round', sans-serif;
+padding: 5px;
+display: block;
+line-height: 1.8;
+margin-left: auto;
+margin-right: auto;
+}
+

@@ -50,12 +50,7 @@
                         <option value='2'>2</option>
                         <option value='3'>3</option>
                         <option value='4'>4</option>
-                        <option value='5'>5</option>
-                        <option value='6'>6</option>
-                        <option value='7'>7</option>
-                        <option value='8'>8</option>
-                        <option value='9'>9</option>
-                        <option value='10'>10</option>
+                        <option value='5'>5+</option>
                     </select>
                     <select class="landing-select-option" id="L-bathrooms">
                         <option>No. of Bathrooms</option>
@@ -63,12 +58,7 @@
                         <option value='2'>2</option>
                         <option value='3'>3</option>
                         <option value='4'>4</option>
-                        <option value='5'>5</option>
-                        <option value='6'>6</option>
-                        <option value='7'>7</option>
-                        <option value='8'>8</option>
-                        <option value='9'>9</option>
-                        <option value='10'>10</option>
+                        <option value='5'>5+</option>
                     </select>
                     <select class="landing-select-option" id="L-garage">
                         <option>No. of Garages</option>
@@ -76,24 +66,17 @@
                         <option value='2'>2</option>
                         <option value='3'>3</option>
                         <option value='4'>4</option>
-                        <option value='5'>5</option>
-                        <option value='6'>6</option>
-                        <option value='7'>7</option>
-                        <option value='8'>8</option>
-                        <option value='9'>9</option>
-                        <option value='10'>10</option>
+                        <option value='5'>5+</option>
                     </select>
                 </div>
                 <div id="landing-search-range">
                     <div class="landing-range-options" id="L-min-price-holder">
                         <label id="L-min-price-label" class="range-option-label">Minimum price</label>
-                        <input type="range" value="200000" id="L-min-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
-                        <output>200000</output>
+                        <input class="numberInput" type="number"  id="L-min-price" step="10000"min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
                     </div>
                     <div class="landing-range-options" id="L-max-price-holder">
                         <label id="L-max-price-label" class="range-option-label">Maximum price</label>
-                        <input type="range" value="200000" id="L-max-price" min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
-                        <output>200000</output>
+                        <input class="numberInput" type="number"  id="L-max-price" step="10000"min="0" max="10000000" oninput="this.nextElementSibling.value = this.value">
                     </div>
                 </div>
                 <!-- <button id="landing-sell-button" type="button"onclick="location.href='./AddListing.html'">SELL</button> -->
