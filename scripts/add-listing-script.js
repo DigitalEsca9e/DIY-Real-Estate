@@ -331,7 +331,7 @@ function postalCodeChanged(ev){
 }
 
 function postalCodeRelease(ev){
-    if(ev.target.value.length >= 3){
+    if(ev.target.value.length >= 4){
 	var rg = /([a-zA-Z0-9]{3})([a-zA-Z0-9]{0,3})/;
 	var newstr = ev.target.value.replace(/\s*/g,'');
 	var split = newstr.match(rg);
