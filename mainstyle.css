@@ -166,6 +166,7 @@ body{
 .numberInput{
     border-radius: 10px;
     border: 1px solid;
+    font-family: 'Varela Round', sans-serif;
 }
 /*contact us page styling*/
 #ContactUsPage{
